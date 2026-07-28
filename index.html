@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A guided decision and FAQ tool based on Charles Sturt University advice relating to AI in research.">
+  <title>AI in Research Guidance Finder</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Charles Sturt University research guidance</p>
+        <h1>AI in Research Guidance Finder</h1>
+        <p class="intro">Find practical guidance about responsible AI use across the research lifecycle.</p>
+      </div>
+      <button id="printButton" class="button button-secondary no-print" type="button">Print this page</button>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="alert alert-warning" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Do not enter research data here</h2>
+      <p>Do not paste participant information, confidential research data, unpublished material or culturally restricted information into this tool. Search using a general description of the task only.</p>
+    </section>
+
+    <section class="disclaimer" aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">What this tool does</h2>
+      <p>This finder provides indicative guidance based on the <em>Advice Relating to the Use of Artificial Intelligence in Research</em>. It does not replace University policy, ethics approval, legal advice, contractual obligations, funder conditions, publisher requirements or discipline-specific standards.</p>
+    </section>
+
+    <nav class="tabs no-print" aria-label="Guidance finder options">
+      <button class="tab is-active" id="tab-guide" type="button" aria-controls="guide-panel" aria-selected="true">Guide me</button>
+      <button class="tab" id="tab-search" type="button" aria-controls="search-panel" aria-selected="false">Search common questions</button>
+      <button class="tab" id="tab-browse" type="button" aria-controls="browse-panel" aria-selected="false">Browse by topic</button>
+    </nav>
+
+    <section id="guide-panel" class="panel" aria-labelledby="tab-guide">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Guided pathway</p>
+          <h2>Can I use AI for this research task?</h2>
+        </div>
+        <button id="restartGuide" class="button button-link no-print" type="button">Restart</button>
+      </div>
+      <div id="progress" class="progress" aria-live="polite"></div>
+      <div id="guideContent" class="guide-content" aria-live="polite"></div>
+    </section>
+
+    <section id="search-panel" class="panel" aria-labelledby="tab-search" hidden>
+      <p class="eyebrow">Controlled answers</p>
+      <h2>Search common questions</h2>
+      <label for="searchInput">Describe your question without including sensitive details</label>
+      <div class="search-row">
+        <input id="searchInput" type="search" autocomplete="off" placeholder="For example: Can I use Copilot with interview transcripts?">
+        <button id="clearSearch" class="button button-secondary" type="button">Clear</button>
+      </div>
+      <p id="searchSummary" class="muted" aria-live="polite"></p>
+      <div id="searchResults" class="results-list"></div>
+    </section>
+
+    <section id="browse-panel" class="panel" aria-labelledby="tab-browse" hidden>
+      <p class="eyebrow">Browse guidance</p>
+      <h2>Choose a research activity</h2>
+      <div id="categoryGrid" class="category-grid"></div>
+      <div id="categoryResults" class="results-list"></div>
+    </section>
+
+    <section id="answerPanel" class="answer-panel" hidden aria-live="polite"></section>
+
+    <section class="support-section" aria-labelledby="support-title">
+      <h2 id="support-title">Still unsure?</h2>
+      <p>Pause before uploading material and contact the support area relevant to your question. Possible pathways include your supervisor or project lead, Human Research Ethics Committee, Research Data Management support, Privacy and Information Security, the Library Copyright Adviser, Research Integrity, the Research Office or Library research and publishing support.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>AI in Research Guidance Finder</strong>
+        <p>Prototype based on the 2026 draft guidance. Review and approve all wording before publication.</p>
+      </div>
+      <div>
+        <p><strong>Content version:</strong> 0.1 prototype</p>
+        <p><strong>Last reviewed:</strong> 28 July 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

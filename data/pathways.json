@@ -1,0 +1,127 @@
+{
+  "start": {
+    "question": "What do you want AI to help with?",
+    "options": [
+      {"label": "Research ideas or methods", "next": "ideas-material"},
+      {"label": "Literature searching or reviewing", "next": "review-task"},
+      {"label": "Writing, editing or translation", "next": "writing-material"},
+      {"label": "Data, transcripts or analysis", "next": "data-human"},
+      {"label": "Images, diagrams or multimedia", "next": "image-purpose"},
+      {"label": "Grant, publishing, review or examination", "next": "confidential-review"}
+    ]
+  },
+  "ideas-material": {
+    "question": "Will you enter confidential, participant, unpublished or restricted material?",
+    "options": [
+      {"label": "No", "result": "ideas-ok"},
+      {"label": "Yes or unsure", "next": "tool-type"}
+    ]
+  },
+  "review-task": {
+    "question": "Which review task is involved?",
+    "options": [
+      {"label": "Question framing or keyword ideas", "result": "review-exploratory"},
+      {"label": "Search strategy", "result": "review-search"},
+      {"label": "Screening, extraction or appraisal", "result": "review-validation"},
+      {"label": "Synthesis or conclusions", "result": "review-synthesis"}
+    ]
+  },
+  "writing-material": {
+    "question": "What material will you enter?",
+    "options": [
+      {"label": "My own non-confidential text", "next": "writing-impact"},
+      {"label": "Unpublished or confidential text", "next": "tool-type"},
+      {"label": "Published articles or books", "result": "copyright-check"},
+      {"label": "Participant material", "result": "participant-approval"}
+    ]
+  },
+  "writing-impact": {
+    "question": "Will AI only improve grammar and clarity?",
+    "options": [
+      {"label": "Yes", "result": "editing-low"},
+      {"label": "No, it will draft or shape content", "result": "writing-material-use"}
+    ]
+  },
+  "data-human": {
+    "question": "Does the material involve human participant data?",
+    "options": [
+      {"label": "Yes", "next": "data-identifiable"},
+      {"label": "No", "next": "data-restricted"},
+      {"label": "Unsure", "result": "seek-advice"}
+    ]
+  },
+  "data-identifiable": {
+    "question": "Is it identifiable or potentially re-identifiable?",
+    "options": [
+      {"label": "Yes or unsure", "result": "participant-approval"},
+      {"label": "No, it is de-identified", "next": "ethics-covered"},
+      {"label": "It is synthetic or dummy data", "result": "synthetic-ok"}
+    ]
+  },
+  "ethics-covered": {
+    "question": "Was AI processing covered by ethics, consent and the data management plan?",
+    "options": [
+      {"label": "Yes", "next": "tool-type"},
+      {"label": "No or unsure", "result": "participant-approval"}
+    ]
+  },
+  "data-restricted": {
+    "question": "Is the data confidential, partner-owned, unpublished, copyrighted or culturally restricted?",
+    "options": [
+      {"label": "No", "next": "analysis-impact"},
+      {"label": "Yes or unsure", "next": "tool-type"}
+    ]
+  },
+  "analysis-impact": {
+    "question": "Will AI influence analysis, interpretation or a research decision?",
+    "options": [
+      {"label": "No, learning or testing only", "result": "low-risk-check"},
+      {"label": "Yes", "result": "analysis-caution"}
+    ]
+  },
+  "tool-type": {
+    "question": "What type of AI tool will you use?",
+    "options": [
+      {"label": "Public or consumer AI tool", "result": "public-restricted"},
+      {"label": "University-approved or protected tool", "result": "approved-not-automatic"},
+      {"label": "Unsure", "result": "seek-advice"}
+    ]
+  },
+  "image-purpose": {
+    "question": "What will the image or diagram be used for?",
+    "options": [
+      {"label": "Scientific figure or data visualisation", "result": "image-scientific"},
+      {"label": "Conceptual illustration or presentation", "result": "image-disclose"},
+      {"label": "Journal or publisher submission", "result": "publisher-check"}
+    ]
+  },
+  "confidential-review": {
+    "question": "Are you handling material supplied for confidential review or examination?",
+    "options": [
+      {"label": "Yes", "result": "confidential-review-no"},
+      {"label": "No, I am preparing my own application or output", "result": "funder-publisher-check"}
+    ]
+  },
+  "results": {
+    "ideas-ok": {"status":"acceptable","title":"Generally acceptable with human judgement","text":"AI may support brainstorming or explain methods where no restricted material is entered. The final question, design and rationale must remain researcher-led and grounded in scholarly sources.","actions":["Verify suggestions against the literature.","Check for bias, omissions and overconfidence.","Record or declare use if it materially shapes the project."]},
+    "review-exploratory": {"status":"acceptable","title":"Suitable for exploratory support","text":"AI can help generate possible frameworks, themes, terminology and keywords. It must not replace the final review question, inclusion criteria or systematic search process.","actions":["Verify terminology in authoritative databases.","Use disciplinary and methodological judgement.","Declare material influence where relevant."]},
+    "review-search": {"status":"caution","title":"Use with caution and human verification","text":"AI can suggest terms or draft syntax, but database selection, final syntax, testing, peer review and documentation must remain human-led.","actions":["Check subject headings and syntax in every database.","Test against known studies.","Document the final strategy and any AI assistance."]},
+    "review-validation": {"status":"caution","title":"Validation and human verification required","text":"AI-supported screening, extraction or appraisal can affect review findings. Use only with an appropriate validation and verification plan, and retain humans for final decisions.","actions":["Assess task-specific validation evidence.","Pilot on a representative sample.","Define acceptable performance before reliance.","Report errors, corrections and limitations."]},
+    "review-synthesis": {"status":"caution","title":"Human-led synthesis required","text":"AI may suggest themes or structures, but it must not replace critical appraisal, interpretation, methodological judgement or final synthesis.","actions":["Base conclusions on verified source data.","Check for omitted or privileged perspectives.","Declare and document material AI use."]},
+    "copyright-check": {"status":"approval","title":"Check copyright and licence permissions first","text":"Access to a publication does not automatically permit uploading it to an AI system. Check the licence, publisher terms and tool conditions before proceeding.","actions":["Use your own notes or lawful open content where possible.","Seek copyright advice if uncertain."]},
+    "participant-approval": {"status":"approval","title":"Approval is required before proceeding","text":"Participant data must not be uploaded into a public AI tool. Use of an approved tool may only be considered where ethics, consent, governance, confidentiality and the data management plan permit it.","actions":["Check the approved ethics application and participant information.","Confirm the tool is approved for the data.","Seek ethics advice or an amendment if needed."]},
+    "editing-low": {"status":"acceptable","title":"Usually low risk, but check requirements","text":"Minor grammar and clarity support is not usually material use unless it changes meaning, analysis or claims. Publisher, thesis or course rules may still require acknowledgement.","actions":["Check the edited version against your original.","Verify quotations, citations and technical terms.","Follow the relevant declaration rules."]},
+    "writing-material-use": {"status":"caution","title":"Material use: verify, document and declare","text":"AI may support drafting or restructuring, but it must not replace intellectual work or scholarly voice. All claims and citations require verification.","actions":["Substantially review and contextualise the output.","Verify all claims and sources.","Keep an AI-use log.","Declare material use."]},
+    "synthetic-ok": {"status":"acceptable","title":"Generally acceptable for testing or learning","text":"Synthetic or dummy data can be used for initial testing where it contains no real or traceable information and is clearly labelled as synthetic.","actions":["Confirm no real data is included.","Do not present synthetic outputs as findings.","Record use if it shapes the final method."]},
+    "low-risk-check": {"status":"acceptable","title":"Generally acceptable with normal safeguards","text":"Learning about methods or testing workflows with non-restricted material is generally acceptable. Outputs must still be checked for accuracy and appropriateness.","actions":["Use critical judgement.","Verify advice against reliable methods sources.","Avoid unnecessary or disproportionate AI use."]},
+    "analysis-caution": {"status":"caution","title":"Use with caution and independent verification","text":"AI-assisted analysis or interpretation can materially influence research findings. Ensure the method is appropriate, the tool is suitable and outputs are validated and human-verified.","actions":["Check ethics and governance requirements.","Validate the tool in context.","Record prompts, version and verification.","Retain human responsibility for interpretation."]},
+    "public-restricted": {"status":"prohibited","title":"Do not enter restricted material into a public tool","text":"Public AI tools should not receive participant, identifiable, confidential, unpublished, partner-owned, copyrighted or culturally restricted material unless explicit permissions and safeguards exist.","actions":["Stop before uploading.","Classify the material.","Seek the appropriate ethics, copyright, privacy or governance advice."]},
+    "approved-not-automatic": {"status":"approval","title":"An approved tool does not automatically approve the use","text":"University protection reduces some risks, but the proposed use must still align with ethics, consent, confidentiality, copyright, contracts, data governance and the data management plan.","actions":["Confirm the specific use case is permitted.","Check data classification and permissions.","Document approvals and verification."]},
+    "seek-advice": {"status":"approval","title":"Pause and seek advice","text":"The risk cannot be determined safely from the information available. Treat the material as higher risk until its classification, permissions and tool protections are confirmed.","actions":["Do not upload the material yet.","Consult the relevant support service or project lead."]},
+    "image-scientific": {"status":"prohibited","title":"Use validated tools instead","text":"AI image generators are generally not appropriate for scientific figures, quantitative visualisations or diagrams requiring factual precision. Produce figures from actual data using validated tools.","actions":["Use reproducible figure or visualisation software.","Check the target publisher policy."]},
+    "image-disclose": {"status":"caution","title":"Possible with accuracy, bias and disclosure checks","text":"A conceptual AI-generated illustration may be suitable in some contexts, but it must be reviewed for accuracy, bias, copyright and accessibility and clearly identified where used.","actions":["Check the intended venue's rules.","Label the image as AI-generated.","Record the tool, date and prompt."]},
+    "publisher-check": {"status":"approval","title":"Check the current publisher policy first","text":"Publishers differ in whether they permit AI-generated or AI-edited images. Do not assume institutional guidance is sufficient for submission.","actions":["Check current author guidelines.","Follow labelling, disclosure and permission requirements."]},
+    "confidential-review-no": {"status":"prohibited","title":"Do not upload confidential review material","text":"Theses, manuscripts, grant applications and other material supplied for confidential review must not be uploaded into a public AI tool. Any permitted use must be explicitly authorised by the relevant process.","actions":["Follow the reviewer or examiner instructions.","Protect confidential material.","Do not outsource expert judgement."]},
+    "funder-publisher-check": {"status":"caution","title":"Check current funder or publisher requirements","text":"AI may support preparation of your own output, but requirements vary. You remain responsible for accuracy, integrity, authorship, confidentiality and disclosure.","actions":["Check current policy before use or submission.","Do not enter restricted information into public tools.","Verify and declare material use."]}
+  }
+}
