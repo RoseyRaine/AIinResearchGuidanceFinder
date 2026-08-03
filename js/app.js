@@ -74,11 +74,11 @@ function renderGuide() {
   if (!node) return;
 
   const buttons = node.options.map(option =>
-    `<button class="option-button" type="button" data-next="${escapeHtml(option.next || '')}" data-result="${escapeHtml(option.result || '')}">${escapeHtml(option.label)}</button>`
+    `<button class="option-card" type="button" data-next="${escapeHtml(option.next || '')}" data-result="${escapeHtml(option.result || '')}">${escapeHtml(option.label)}</button>`
   ).join('');
 
   el('guideContent').innerHTML = `<h3>${escapeHtml(node.question)}</h3><div class="option-grid">${buttons}</div>`;
-  el('guideContent').querySelectorAll('.option-button').forEach(button => {
+  el('guideContent').querySelectorAll('.option-card').forEach(button => {
     button.addEventListener('click', () => {
       state.guideHistory.push(state.guideNode);
       if (button.dataset.result) renderPathwayResult(button.dataset.result);
@@ -161,10 +161,10 @@ function renderCategories() {
   const categories = [...new Set(state.questions.map(question => question.category))];
   el('categoryGrid').innerHTML = categories.map(category => {
     const count = state.questions.filter(question => question.category === category).length;
-    return `<button class="category-button" type="button" data-category="${escapeHtml(category)}">${escapeHtml(category)}<span class="result-meta">${count} question${count === 1 ? '' : 's'}</span></button>`;
+    return `<button class="category-card" type="button" data-category="${escapeHtml(category)}">${escapeHtml(category)}<span class="result-meta">${count} question${count === 1 ? '' : 's'}</span></button>`;
   }).join('');
 
-  el('categoryGrid').querySelectorAll('.category-button').forEach(button => {
+  el('categoryGrid').querySelectorAll('.category-card').forEach(button => {
     button.addEventListener('click', () => {
       const category = button.dataset.category;
       const matches = state.questions.filter(question => question.category === category);
@@ -177,10 +177,10 @@ function renderCategories() {
 
 function resultCard(question) {
   const meta = statusMeta[question.status];
-  return `<article class="result-card">
-    <button type="button" data-question-id="${escapeHtml(question.id)}">${escapeHtml(question.title)}</button>
-    <p class="result-meta">${escapeHtml(question.category)} · ${meta.label}</p>
-  </article>`;
+  return `<button class="question-card" type="button" data-question-id="${escapeHtml(question.id)}">
+    <strong>${escapeHtml(question.title)}</strong>
+    <span>${escapeHtml(question.category)} · ${meta.label}</span>
+  </button>`;
 }
 
 function bindAnswerButtons(container) {
@@ -189,44 +189,55 @@ function bindAnswerButtons(container) {
   });
 }
 
+function accordionItem(title, content, open = false) {
+  const id = `accordion-${Math.random().toString(36).slice(2)}`;
+  return `<div class="accordion-item">
+    <button class="accordion-trigger" type="button" aria-expanded="${open}" aria-controls="${id}">
+      <span>${escapeHtml(title)}</span><span aria-hidden="true">${open ? '−' : '+'}</span>
+    </button>
+    <div class="accordion-panel" id="${id}" ${open ? '' : 'hidden'}>${content}</div>
+  </div>`;
+}
+
 function showAnswer(id) {
   const question = state.questions.find(item => item.id === id);
   if (!question) return;
   const meta = statusMeta[question.status];
   const panel = el('answerPanel');
+  const list = items => `<ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
   panel.innerHTML = `
-    <div class="status-banner status-${question.status}">
-      <p class="status-label">${meta.icon} ${meta.label}</p>
-      <h2>${escapeHtml(question.title)}</h2>
-      <p>${escapeHtml(question.answer)}</p>
-    </div>
-    <div class="answer-grid">
+    <section class="verdict-panel status-${question.status}" aria-labelledby="verdict-title">
       <div>
-        <h3>Why this matters</h3>
-        <ul>${question.why.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-        <h3>Before proceeding</h3>
-        <ul>${question.actions.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-        <h3>What to record or declare</h3>
-        <p>${escapeHtml(question.recording)}</p>
+        <p class="verdict-kicker">${meta.icon} ${meta.label}</p>
+        <h2 id="verdict-title">${escapeHtml(question.title)}</h2>
+        <p>${escapeHtml(question.answer)}</p>
       </div>
-      <aside>
-        <div class="detail-box">
-          <h3>Guideline basis</h3>
-          <ul>${question.sections.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-        </div>
-        <div class="detail-box">
-          <h3>Possible support pathways</h3>
-          <ul>${question.support.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-        </div>
-      </aside>
-    </div>
-    <div class="answer-actions no-print">
-      <button id="closeAnswer" class="button button-secondary" type="button">Close answer</button>
-      <button id="printAnswer" class="button button-primary" type="button">Print answer</button>
-    </div>`;
+      <button id="closeAnswer" class="back-button" type="button">Back to the tool</button>
+    </section>
+    <section class="detail-panel" aria-label="Guideline breakdown">
+      <p class="eyebrow">Guideline breakdown</p>
+      ${accordionItem('Why this matters', list(question.why), true)}
+      ${accordionItem('Before proceeding', list(question.actions))}
+      ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>`)}
+      ${accordionItem('Guideline basis', list(question.sections))}
+      ${accordionItem('Possible support pathways', list(question.support))}
+      <button id="printAnswer" class="mode-button" type="button">Print this result</button>
+    </section>`;
   panel.hidden = false;
   panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  el('closeAnswer').addEventListener('click', () => { panel.hidden = true; });
+  panel.querySelectorAll('.accordion-trigger').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = document.getElementById(button.getAttribute('aria-controls'));
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      target.hidden = expanded;
+      button.lastElementChild.textContent = expanded ? '+' : '−';
+    });
+  });
+  el('closeAnswer').addEventListener('click', () => {
+    panel.hidden = true;
+    document.querySelector('.experience-card:not([hidden])')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   el('printAnswer').addEventListener('click', () => window.print());
 }
 

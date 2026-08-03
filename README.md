@@ -1,4 +1,4 @@
-# AI in Research Guidance Finder
+# AI in Research Decision Tool
 
 A static, accessible decision-support website designed for GitHub Pages and embedding in Springshare LibGuides.
 
@@ -55,7 +55,7 @@ Add the following to an HTML-enabled LibGuides box after replacing the URL:
 <div style="width:100%; min-height:900px;">
   <iframe
     src="https://YOUR-USERNAME.github.io/ai-research-guidance/"
-    title="AI in Research Guidance Finder"
+    title="AI in Research Decision Tool"
     width="100%"
     height="900"
     loading="lazy"
@@ -108,3 +108,7 @@ Edit `data/pathways.json`.
 - Conduct keyboard, screen-reader and mobile testing.
 - Add an approved privacy statement and analytics only if required.
 - Establish a content owner, approval process, version number and review schedule.
+
+
+## Brand note
+This prototype uses the approved Charles Sturt colour values and Arial as the approved system substitute for Basis Grotesque. The header currently uses a clearly simplified prototype brand lock-up. Before public release, replace it with the official approved horizontal Charles Sturt University logo artwork supplied by the Brand and Performance Marketing team; do not redraw or alter the official logo.
