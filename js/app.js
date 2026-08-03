@@ -69,7 +69,7 @@ function init() {
 function bindTabs() {
   const tabs = ['guide', 'search', 'browse'];
   tabs.forEach(name => {
-    el(`tab-${name}`).addEventListener('click', () => {
+    el(`tab-${name}`)?.addEventListener('click', () => {
       tabs.forEach(other => {
         const selected = other === name;
         el(`tab-${other}`).classList.toggle('is-active', selected);
@@ -77,20 +77,19 @@ function bindTabs() {
         el(`${other}-panel`).hidden = !selected;
       });
       el('answerPanel').hidden = true;
-      if (name === 'search') el('searchInput').focus();
+      if (name === 'search') el('searchInput')?.focus();
     });
   });
 }
 
 function bindControls() {
-  el('restartGuide').addEventListener('click', restartGuide);
-  el('printButton').addEventListener('click', () => window.print());
-  el('clearSearch').addEventListener('click', () => {
-    el('searchInput').value = '';
+  el('restartGuide')?.addEventListener('click', restartGuide);
+  el('clearSearch')?.addEventListener('click', () => {
+    if (el('searchInput')) el('searchInput').value = '';
     renderSearchResults(state.questions.slice(0, 8), 'Popular questions');
-    el('searchInput').focus();
+    el('searchInput')?.focus();
   });
-  el('searchInput').addEventListener('input', event => runSearch(event.target.value));
+  el('searchInput')?.addEventListener('input', event => runSearch(event.target.value));
 }
 
 function renderGuide() {

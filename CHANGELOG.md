@@ -1,5 +1,10 @@
 ## 0.2.4
 
+## 0.2.5
+- Removed a stale `printButton` event binding accidentally reintroduced in version 0.2.4.
+- Made optional interface-control bindings null-safe to prevent startup failures when a control is absent.
+
+
 - Added clickable links to relevant Charles Sturt support services in the “Possible support pathways” accordion.
 - External links open in a new tab and include accessible screen-reader text.
 - Roles without a single institutional destination remain plain text.
