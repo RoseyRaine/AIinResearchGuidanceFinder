@@ -1,3 +1,8 @@
+## 0.2.6 — Full guidance integration
+- Added the complete draft guidance as `guide.html`.
+- Added direct links from each Guideline basis item to the relevant section.
+- Added a Full guidance link to the main navigation and footer.
+
 ## 0.2.4
 
 ## 0.2.5

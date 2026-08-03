@@ -17,6 +17,42 @@ const statusMeta = {
 
 const el = id => document.getElementById(id);
 
+
+const guidelineLinks = {
+  'Core Principles': 'guide.html#section-2',
+  'Core Principles: Equity, inclusion and cultural safety': 'guide.html#principle-equity-inclusion-cultural-safety',
+  'Copyright and intellectual property principle': 'guide.html#principle-copyright-ip',
+  'Definition: Material AI use': 'guide.html#definition-material-ai-use',
+  'Roles and Responsibilities': 'guide.html#section-4',
+  'Recommendation 1': 'guide.html#recommendation-1',
+  'Recommendation 2': 'guide.html#recommendation-2',
+  'Recommendation 3': 'guide.html#recommendation-3',
+  'Recommendation 4': 'guide.html#recommendation-4',
+  'Recommendation 6': 'guide.html#recommendation-6',
+  'Recommendation 7': 'guide.html#recommendation-7',
+  'Recommendation 8': 'guide.html#recommendation-8',
+  'Levels of AI tool use': 'guide.html#levels-of-ai-tool-use',
+  'Section 7': 'guide.html#section-7',
+  'Section 7: Collaboration and third-party interactions': 'guide.html#section-7-collaboration',
+  'Section 7: Ethics and governance': 'guide.html#section-7-ethics',
+  'Section 7: Data collection': 'guide.html#section-7-data-collection',
+  'Section 7: Data analysis': 'guide.html#section-7-data-analysis',
+  'Section 8': 'guide.html#section-8',
+  'Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot': 'guide.html#section-8-onedrive-copilot',
+  'Section 9': 'guide.html#section-9',
+  'Section 10: Funder Requirements': 'guide.html#section-10',
+  'Section 10: ARC and NHMRC updated joint policy': 'guide.html#section-10-arc-nhmrc',
+  'Section 11': 'guide.html#section-11',
+  'Section 11: Thesis examiners and assessors': 'guide.html#section-11-examiners',
+  'Section 12': 'guide.html#section-12',
+  'Appendix A': 'guide.html#appendix-a',
+  'Appendix B': 'guide.html#appendix-b',
+  'Appendix C': 'guide.html#appendix-c',
+  'Appendix E': 'guide.html#appendix-e',
+  'Case Study 4': 'guide.html#case-study-4',
+  'Case Study 6': 'guide.html#case-study-6'
+};
+
 const supportLinks = {
   'Human Research Ethics Committee': 'https://www.csu.edu.au/research/integrity-ethics-compliance/human-ethics',
   'Human Research Ethics': 'https://www.csu.edu.au/research/integrity-ethics-compliance/human-ethics',
@@ -224,6 +260,15 @@ function accordionItem(title, content, open = false) {
   </div>`;
 }
 
+
+function guidelineBasisList(items) {
+  return `<ul class="guideline-basis-list">${items.map(item => {
+    const url = guidelineLinks[item];
+    if (!url) return `<li>${escapeHtml(item)}</li>`;
+    return `<li><a href="${escapeHtml(url)}">${escapeHtml(item)}<span class="basis-link-note">View in full guidance</span></a></li>`;
+  }).join('')}</ul><p class="guidance-document-link"><a href="guide.html">View the complete AI in Research guidance</a></p>`;
+}
+
 function showAnswer(id) {
   const question = state.questions.find(item => item.id === id);
   if (!question) return;
@@ -249,7 +294,7 @@ function showAnswer(id) {
       ${accordionItem('Why this matters', list(question.why), true)}
       ${accordionItem('Before proceeding', list(question.actions))}
       ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>`)}
-      ${accordionItem('Guideline basis', list(question.sections))}
+      ${accordionItem('Guideline basis', guidelineBasisList(question.sections))}
       ${accordionItem('Possible support pathways', supportList(question.support))}
       <button id="printAnswer" class="mode-button" type="button">Print this result</button>
     </section>`;
