@@ -1,3 +1,7 @@
+## 0.2.3
+- Disabled automatic hyphenation in verdict headings.
+- Headings now wrap at normal word spaces, with emergency wrapping only for unbreakable strings.
+
 
 ## 0.2.2 — 3 August 2026
 - Fixed long verdict headings overflowing the orange results panel.
