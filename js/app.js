@@ -28,7 +28,11 @@ async function loadData() {
     state.pathways = await pathwaysResponse.json();
     init();
   } catch (error) {
-    el('guideContent').innerHTML = `<div class="status-banner status-prohibited"><h3>Unable to load the guidance content</h3><p>${escapeHtml(error.message)} Open this site through GitHub Pages or another web server rather than directly from your computer.</p></div>`;
+    const guideContent = el('guideContent');
+    if (guideContent) {
+      guideContent.innerHTML = `<div class="status-banner status-prohibited"><h3>Unable to load the guidance content</h3><p>${escapeHtml(error.message)} If this persists on GitHub Pages, check that the data and JavaScript folders were uploaded with the same names and structure.</p></div>`;
+    }
+    console.error(error);
   }
 }
 
@@ -57,14 +61,16 @@ function bindTabs() {
 }
 
 function bindControls() {
-  el('restartGuide').addEventListener('click', restartGuide);
-  el('printButton').addEventListener('click', () => window.print());
-  el('clearSearch').addEventListener('click', () => {
-    el('searchInput').value = '';
+  el('restartGuide')?.addEventListener('click', restartGuide);
+  el('printButton')?.addEventListener('click', () => window.print());
+  el('clearSearch')?.addEventListener('click', () => {
+    const searchInput = el('searchInput');
+    if (!searchInput) return;
+    searchInput.value = '';
     renderSearchResults(state.questions.slice(0, 8), 'Popular questions');
-    el('searchInput').focus();
+    searchInput.focus();
   });
-  el('searchInput').addEventListener('input', event => runSearch(event.target.value));
+  el('searchInput')?.addEventListener('input', event => runSearch(event.target.value));
 }
 
 function renderGuide() {

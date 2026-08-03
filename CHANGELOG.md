@@ -15,3 +15,8 @@
 - Replaced the red theme with Charles Sturt light orange, charcoal, dark green and warm neutral tones.
 - Added an asymmetric verdict-and-guideline result layout with accordions.
 - Updated typography to the approved system substitute (Arial) with a restrained editorial serif display treatment for the prototype.
+
+## 0.2.1 — 3 August 2026
+- Fixed startup error caused by a removed optional print button.
+- Added safe event binding for optional interface controls.
+- Improved the data-loading error message for GitHub Pages troubleshooting.
