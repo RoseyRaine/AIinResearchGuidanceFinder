@@ -1,3 +1,9 @@
+## 0.2.4
+
+- Added clickable links to relevant Charles Sturt support services in the “Possible support pathways” accordion.
+- External links open in a new tab and include accessible screen-reader text.
+- Roles without a single institutional destination remain plain text.
+
 ## 0.2.3
 - Disabled automatic hyphenation in verdict headings.
 - Headings now wrap at normal word spaces, with emergency wrapping only for unbreakable strings.

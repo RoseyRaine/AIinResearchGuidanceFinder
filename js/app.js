@@ -17,6 +17,32 @@ const statusMeta = {
 
 const el = id => document.getElementById(id);
 
+const supportLinks = {
+  'Human Research Ethics Committee': 'https://www.csu.edu.au/research/integrity-ethics-compliance/human-ethics',
+  'Human Research Ethics': 'https://www.csu.edu.au/research/integrity-ethics-compliance/human-ethics',
+  'Research Data Management support': 'https://library.csu.edu.au/for-researchers/search-analyse/research-data-management',
+  'DIT': 'https://staff.csu.edu.au/division/information-technology/home',
+  'Privacy and information security': 'https://www.csu.edu.au/division/vcoffice/ogca/data-privacy',
+  'Privacy': 'https://www.csu.edu.au/division/vcoffice/ogca/data-privacy',
+  'Research integrity support': 'https://research.csu.edu.au/research-at-charles-sturt/research-integrity',
+  'Graduate Research Office': 'https://research.csu.edu.au/graduate-research',
+  'Graduate Research': 'https://research.csu.edu.au/graduate-research',
+  'Library research support': 'https://library.csu.edu.au/for-researchers',
+  'Library Copyright adviser': 'https://www.csu.edu.au/copyright/home',
+  'Research Office': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
+  'Library publishing support': 'https://library.csu.edu.au/for-researchers/publish-engage/where-to-publish',
+  'Library faculty team': 'https://library.csu.edu.au/our-libraries/contact-library-team/faculty-teams',
+  'AI guidance for students': 'https://www.csu.edu.au/current-students/studying/assignments-and-exams/generative-ai',
+  'Charles Sturt AI principles': 'https://policy.csu.edu.au/document/view-current.php?id=577',
+  'Generative AI Library Guide': 'https://libguides.csu.edu.au/generativeAI',
+  'Microsoft Copilot information': 'https://www.csu.edu.au/current-students/support/it/software-downloads/microsoft-copilot',
+  'AI in research guidance': 'https://libguides.csu.edu.au/generativeAI/research',
+  'Copyright and GenAI guidance': 'https://libguides.csu.edu.au/generativeAI/Copyright',
+  'Review methodologist': 'https://library.csu.edu.au/our-libraries/contact-library-team/faculty-teams',
+  'Methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
+  'Statistician or methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support'
+};
+
 async function loadData() {
   try {
     const [questionsResponse, pathwaysResponse] = await Promise.all([
@@ -28,11 +54,7 @@ async function loadData() {
     state.pathways = await pathwaysResponse.json();
     init();
   } catch (error) {
-    const guideContent = el('guideContent');
-    if (guideContent) {
-      guideContent.innerHTML = `<div class="status-banner status-prohibited"><h3>Unable to load the guidance content</h3><p>${escapeHtml(error.message)} If this persists on GitHub Pages, check that the data and JavaScript folders were uploaded with the same names and structure.</p></div>`;
-    }
-    console.error(error);
+    el('guideContent').innerHTML = `<div class="status-banner status-prohibited"><h3>Unable to load the guidance content</h3><p>${escapeHtml(error.message)} Open this site through GitHub Pages or another web server rather than directly from your computer.</p></div>`;
   }
 }
 
@@ -61,16 +83,14 @@ function bindTabs() {
 }
 
 function bindControls() {
-  el('restartGuide')?.addEventListener('click', restartGuide);
-  el('printButton')?.addEventListener('click', () => window.print());
-  el('clearSearch')?.addEventListener('click', () => {
-    const searchInput = el('searchInput');
-    if (!searchInput) return;
-    searchInput.value = '';
+  el('restartGuide').addEventListener('click', restartGuide);
+  el('printButton').addEventListener('click', () => window.print());
+  el('clearSearch').addEventListener('click', () => {
+    el('searchInput').value = '';
     renderSearchResults(state.questions.slice(0, 8), 'Popular questions');
-    searchInput.focus();
+    el('searchInput').focus();
   });
-  el('searchInput')?.addEventListener('input', event => runSearch(event.target.value));
+  el('searchInput').addEventListener('input', event => runSearch(event.target.value));
 }
 
 function renderGuide() {
@@ -211,6 +231,11 @@ function showAnswer(id) {
   const meta = statusMeta[question.status];
   const panel = el('answerPanel');
   const list = items => `<ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+  const supportList = items => `<ul class="support-link-list">${items.map(item => {
+    const url = supportLinks[item];
+    if (!url) return `<li>${escapeHtml(item)}</li>`;
+    return `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item)}<span class="visually-hidden"> (opens in a new tab)</span></a></li>`;
+  }).join('')}</ul>`;
   panel.innerHTML = `
     <section class="verdict-panel status-${question.status}" aria-labelledby="verdict-title">
       <div>
@@ -226,7 +251,7 @@ function showAnswer(id) {
       ${accordionItem('Before proceeding', list(question.actions))}
       ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>`)}
       ${accordionItem('Guideline basis', list(question.sections))}
-      ${accordionItem('Possible support pathways', list(question.support))}
+      ${accordionItem('Possible support pathways', supportList(question.support))}
       <button id="printAnswer" class="mode-button" type="button">Print this result</button>
     </section>`;
   panel.hidden = false;
