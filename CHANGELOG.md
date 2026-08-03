@@ -41,3 +41,8 @@
 - Replaced the red theme with Charles Sturt light orange, charcoal, dark green and warm neutral tones.
 - Added an asymmetric verdict-and-guideline result layout with accordions.
 - Updated typography to the approved system substitute (Arial) with a restrained editorial serif display treatment for the prototype.
+
+## 0.2.7
+- Fixed the browse-by-activity layout so selected questions appear in a full-width section beneath the activity grid.
+- Added clear spacing and alignment between activity names and question counts.
+- Added a selected state for the active activity card.

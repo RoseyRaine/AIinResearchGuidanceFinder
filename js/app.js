@@ -220,18 +220,39 @@ function renderSearchResults(questions, summary) {
 
 function renderCategories() {
   const categories = [...new Set(state.questions.map(question => question.category))];
-  el('categoryGrid').innerHTML = categories.map(category => {
+  const grid = el('categoryGrid');
+  const results = el('categoryResults');
+
+  grid.innerHTML = categories.map(category => {
     const count = state.questions.filter(question => question.category === category).length;
-    return `<button class="category-card" type="button" data-category="${escapeHtml(category)}">${escapeHtml(category)}<span class="result-meta">${count} question${count === 1 ? '' : 's'}</span></button>`;
+    return `<button class="category-card" type="button" data-category="${escapeHtml(category)}" aria-pressed="false">
+      <span class="category-name">${escapeHtml(category)}</span>
+      <span class="result-meta">${count} question${count === 1 ? '' : 's'}</span>
+    </button>`;
   }).join('');
 
-  el('categoryGrid').querySelectorAll('.category-card').forEach(button => {
+  grid.querySelectorAll('.category-card').forEach(button => {
     button.addEventListener('click', () => {
       const category = button.dataset.category;
       const matches = state.questions.filter(question => question.category === category);
-      el('categoryResults').innerHTML = `<h3>${escapeHtml(category)}</h3>${matches.map(question => resultCard(question)).join('')}`;
-      bindAnswerButtons(el('categoryResults'));
-      el('categoryResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      grid.querySelectorAll('.category-card').forEach(card => {
+        const selected = card === button;
+        card.classList.toggle('is-selected', selected);
+        card.setAttribute('aria-pressed', String(selected));
+      });
+
+      results.innerHTML = `
+        <div class="category-results-header">
+          <p class="eyebrow">Selected activity</p>
+          <h3>${escapeHtml(category)}</h3>
+          <p>${matches.length} controlled question${matches.length === 1 ? '' : 's'}</p>
+        </div>
+        <div class="category-question-grid">
+          ${matches.map(question => resultCard(question)).join('')}
+        </div>`;
+      bindAnswerButtons(results);
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 }
