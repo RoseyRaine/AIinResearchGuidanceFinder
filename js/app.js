@@ -183,7 +183,10 @@ function renderPathwayResult(resultId) {
 }
 
 function runSearch(query) {
-  const clean = query.trim().toLowerCase();
+  const raw = query.trim().toLowerCase();
+  const clean = raw
+    .replace(/first\s+nations?/g, 'indigenous aboriginal torres strait islander')
+    .replace(/first-nations?/g, 'indigenous aboriginal torres strait islander');
   if (!clean) {
     renderSearchResults(state.questions.slice(0, 8), 'Popular questions');
     return;

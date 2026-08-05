@@ -3,7 +3,14 @@
     "id": "interview-transcripts",
     "title": "Can I upload interview transcripts into an AI tool?",
     "category": "Participant data and ethics",
-    "keywords": ["interview", "transcript", "qualitative", "participant data", "thematic analysis", "copilot"],
+    "keywords": [
+      "interview",
+      "transcript",
+      "qualitative",
+      "participant data",
+      "thematic analysis",
+      "copilot"
+    ],
     "status": "approval",
     "answer": "Do not upload interview transcripts or other participant data into a public AI tool. Use of a University-approved tool may only be considered where ethics approval, participant consent, the data management plan, confidentiality obligations and data governance requirements permit AI-assisted processing.",
     "why": [
@@ -17,14 +24,31 @@
       "Seek ethics advice or an amendment where the proposed use was not covered."
     ],
     "recording": "Record the tool, version, purpose, input type, prompts or prompt summary, outputs used and human verification steps in the project AI-use log.",
-    "sections": ["Recommendation 2", "Section 8", "Appendix A", "Appendix B"],
-    "support": ["Human Research Ethics Committee", "Supervisor or project lead", "Research Data Management support", "Privacy and information security"]
+    "sections": [
+      "Recommendation 2",
+      "Section 8",
+      "Appendix A",
+      "Appendix B"
+    ],
+    "support": [
+      "Human Research Ethics Committee",
+      "Supervisor or project lead",
+      "Research Data Management support",
+      "Privacy and information security"
+    ]
   },
   {
     "id": "deidentified-data",
     "title": "Can I use AI with de-identified research data?",
     "category": "Data analysis and coding",
-    "keywords": ["deidentified", "de-identified", "anonymised", "anonymized", "data analysis", "dataset"],
+    "keywords": [
+      "deidentified",
+      "de-identified",
+      "anonymised",
+      "anonymized",
+      "data analysis",
+      "dataset"
+    ],
     "status": "caution",
     "answer": "Possibly, but de-identification does not automatically make AI use low risk. Rich qualitative or linked datasets may remain re-identifiable. Use should be consistent with ethics approval, participant consent, governance requirements, the data management plan and the protections of the selected tool.",
     "why": [
@@ -38,68 +62,131 @@
       "Validate and independently verify the analysis."
     ],
     "recording": "Document the data classification, tool, version, purpose, prompts, validation and verification process.",
-    "sections": ["Recommendation 2", "Section 8", "Appendix E"],
-    "support": ["Human Research Ethics Committee", "Research Data Management support", "Privacy and information security"]
+    "sections": [
+      "Recommendation 2",
+      "Section 8",
+      "Appendix E"
+    ],
+    "support": [
+      "Human Research Ethics Committee",
+      "Research Data Management support",
+      "Privacy and information security"
+    ]
   },
   {
     "id": "synthetic-data",
     "title": "Can I use synthetic or dummy data in an AI tool?",
     "category": "Data analysis and coding",
-    "keywords": ["synthetic", "dummy", "fake dataset", "practice data", "test data"],
+    "keywords": [
+      "synthetic",
+      "dummy",
+      "fake dataset",
+      "practice data",
+      "test data"
+    ],
     "status": "acceptable",
     "answer": "Synthetic or dummy data is generally acceptable for learning, testing workflows or practising analysis, provided it contains no real participant or confidential information and is clearly labelled as synthetic.",
-    "why": ["Synthetic data can reduce privacy and confidentiality risks during initial testing."],
+    "why": [
+      "Synthetic data can reduce privacy and confidentiality risks during initial testing."
+    ],
     "actions": [
       "Confirm the dataset contains no real or traceable information.",
       "Label it clearly as synthetic.",
       "Do not present synthetic outputs as research findings."
     ],
     "recording": "Record material use if the workflow or output influences the final research method.",
-    "sections": ["Recommendation 1", "Recommendation 2", "Section 7"],
-    "support": ["Supervisor or project lead", "Research Data Management support"]
+    "sections": [
+      "Recommendation 1",
+      "Recommendation 2",
+      "Section 7"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Research Data Management support"
+    ]
   },
   {
     "id": "onedrive-copilot",
     "title": "Does storing data in OneDrive mean Copilot can analyse it?",
     "category": "Participant data and ethics",
-    "keywords": ["onedrive", "microsoft 365", "copilot", "stored data", "permissions"],
+    "keywords": [
+      "onedrive",
+      "microsoft 365",
+      "copilot",
+      "stored data",
+      "permissions"
+    ],
     "status": "approval",
     "answer": "No. Storing research data in OneDrive does not automatically approve it for AI-assisted processing. Copilot use must still align with ethics approval, participant consent, data governance, confidentiality obligations and the project data management plan.",
-    "why": ["Storage approval and AI-processing approval are separate decisions."],
+    "why": [
+      "Storage approval and AI-processing approval are separate decisions."
+    ],
     "actions": [
       "Review the approved data management plan.",
       "Check file permissions and the relevant Copilot experience.",
       "Confirm that AI processing is permitted before proceeding."
     ],
     "recording": "Record any material AI-assisted processing and how permissions, verification and governance were checked.",
-    "sections": ["Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot"],
-    "support": ["Research Data Management support", "DIT", "Human Research Ethics Committee"]
+    "sections": [
+      "Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot"
+    ],
+    "support": [
+      "Research Data Management support",
+      "DIT",
+      "Human Research Ethics Committee"
+    ]
   },
   {
     "id": "published-pdf",
     "title": "Can I upload a published journal article or book chapter into AI?",
     "category": "Copyright, privacy and confidential material",
-    "keywords": ["article", "pdf", "book chapter", "copyright", "subscription", "licensed content", "upload"],
+    "keywords": [
+      "article",
+      "pdf",
+      "book chapter",
+      "copyright",
+      "subscription",
+      "licensed content",
+      "upload"
+    ],
     "status": "caution",
     "answer": "Access to a publication does not automatically permit uploading it to an AI system. Public AI tools should generally not be used for copyrighted PDFs unless the licence, terms or rights holder permit that use. A University-approved tool may still require a licence and terms check.",
-    "why": ["Library access rights and AI-upload rights are not necessarily the same."],
+    "why": [
+      "Library access rights and AI-upload rights are not necessarily the same."
+    ],
     "actions": [
       "Check the licence, publisher terms and tool terms.",
       "Prefer bibliographic details, your own notes or a lawful open-access version where appropriate.",
       "Seek copyright advice if uncertain."
     ],
     "recording": "Record material use where the AI output influences analysis, writing or evidence synthesis.",
-    "sections": ["Recommendation 2", "Copyright and intellectual property principle", "Appendix A"],
-    "support": ["Library Copyright adviser", "Library research support"]
+    "sections": [
+      "Recommendation 2",
+      "Copyright and intellectual property principle",
+      "Appendix A"
+    ],
+    "support": [
+      "Library Copyright adviser",
+      "Library research support"
+    ]
   },
   {
     "id": "unpublished-draft",
     "title": "Can I upload my unpublished thesis or manuscript draft?",
     "category": "Writing, editing and translation",
-    "keywords": ["unpublished", "draft", "thesis", "manuscript", "editing", "confidential"],
+    "keywords": [
+      "unpublished",
+      "draft",
+      "thesis",
+      "manuscript",
+      "editing",
+      "confidential"
+    ],
     "status": "caution",
     "answer": "Use caution. Avoid uploading unpublished, confidential or commercially sensitive drafts to public AI tools. A University-approved tool is preferred, but you must still consider confidentiality, intellectual property, collaborator agreements, publisher requirements and the tool's data handling.",
-    "why": ["Unpublished work may contain confidential information, intellectual property or partner-owned material."],
+    "why": [
+      "Unpublished work may contain confidential information, intellectual property or partner-owned material."
+    ],
     "actions": [
       "Classify the content before uploading.",
       "Remove restricted information where possible.",
@@ -107,34 +194,67 @@
       "Verify that editing has not altered meaning, citations or claims."
     ],
     "recording": "Declare material editing or drafting assistance where required and retain an AI-use log.",
-    "sections": ["Recommendation 2", "Recommendation 3", "Section 11"],
-    "support": ["Supervisor or project lead", "Library Copyright adviser", "Research integrity support"]
+    "sections": [
+      "Recommendation 2",
+      "Recommendation 3",
+      "Section 11"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Library Copyright adviser",
+      "Research integrity support"
+    ]
   },
   {
     "id": "grammar-editing",
     "title": "Do I need to declare AI used only for grammar and clarity?",
     "category": "Writing, editing and translation",
-    "keywords": ["grammar", "proofreading", "clarity", "editing", "disclosure", "declare"],
+    "keywords": [
+      "grammar",
+      "proofreading",
+      "clarity",
+      "editing",
+      "disclosure",
+      "declare"
+    ],
     "status": "acceptable",
     "answer": "Minor grammar, formatting or readability support is not usually considered material use unless it changes meaning, argument, analysis or claims. Requirements vary, so check thesis, subject, publisher or journal rules. Language assistance should be acknowledged where required.",
-    "why": ["Even editing tools can alter technical meaning, quotations, citations or attribution."],
+    "why": [
+      "Even editing tools can alter technical meaning, quotations, citations or attribution."
+    ],
     "actions": [
       "Compare the edited text with your original.",
       "Check technical terms, quotations, citations and claims.",
       "Follow the relevant thesis, publisher or course declaration requirements."
     ],
     "recording": "A detailed log is not normally needed for every minor correction, but keep records where editing materially affects wording or content.",
-    "sections": ["Definition: Material AI use", "Recommendation 3", "Appendix C"],
-    "support": ["Supervisor", "Research integrity support", "Target publisher or journal"]
+    "sections": [
+      "Definition: Material AI use",
+      "Recommendation 3",
+      "Appendix C"
+    ],
+    "support": [
+      "Supervisor",
+      "Research integrity support",
+      "Target publisher or journal"
+    ]
   },
   {
     "id": "draft-thesis-section",
     "title": "Can AI draft a thesis or manuscript section?",
     "category": "Writing, editing and translation",
-    "keywords": ["draft", "write", "thesis section", "manuscript section", "generate text"],
+    "keywords": [
+      "draft",
+      "write",
+      "thesis section",
+      "manuscript section",
+      "generate text"
+    ],
     "status": "caution",
     "answer": "AI may assist with structure or preliminary drafting, but it must not replace the researcher's intellectual work, scholarly voice, analysis or judgement. All outputs require substantial critical review, verification and appropriate declaration.",
-    "why": ["Presenting AI-generated intellectual content as entirely your own may raise integrity concerns."],
+    "why": [
+      "Presenting AI-generated intellectual content as entirely your own may raise integrity concerns."
+    ],
     "actions": [
       "Use AI as a support tool rather than a writing substitute.",
       "Check every claim and citation against original sources.",
@@ -142,34 +262,67 @@
       "Discuss expectations with your supervisor."
     ],
     "recording": "Keep an AI-use log and declare material drafting or revision assistance in the appropriate location.",
-    "sections": ["Recommendation 1", "Recommendation 3", "Section 12", "Appendix C"],
-    "support": ["Supervisor", "Research integrity support"]
+    "sections": [
+      "Recommendation 1",
+      "Recommendation 3",
+      "Section 12",
+      "Appendix C"
+    ],
+    "support": [
+      "Supervisor",
+      "Research integrity support"
+    ]
   },
   {
     "id": "ai-references",
     "title": "Can I use references suggested by an AI tool?",
     "category": "Literature searching and reviews",
-    "keywords": ["references", "citations", "hallucinated", "doi", "literature", "source"],
+    "keywords": [
+      "references",
+      "citations",
+      "hallucinated",
+      "doi",
+      "literature",
+      "source"
+    ],
     "status": "caution",
     "answer": "AI-suggested references may be used only as leads. Never cite them until you have located and checked the original source in an authoritative database or publisher site.",
-    "why": ["AI tools can invent articles, authors, quotations, page numbers and DOIs."],
+    "why": [
+      "AI tools can invent articles, authors, quotations, page numbers and DOIs."
+    ],
     "actions": [
       "Locate the original publication.",
       "Verify authorship, title, journal, year, DOI and relevance.",
       "Read the original source before relying on its claims."
     ],
     "recording": "Document material AI-assisted literature discovery in the methods or declaration where relevant.",
-    "sections": ["Recommendation 4", "Recommendation 6", "Case Study 4", "Case Study 6"],
-    "support": ["Library research support"]
+    "sections": [
+      "Recommendation 4",
+      "Recommendation 6",
+      "Case Study 4",
+      "Case Study 6"
+    ],
+    "support": [
+      "Library research support"
+    ]
   },
   {
     "id": "search-strategy",
     "title": "Can AI create my literature search strategy?",
     "category": "Literature searching and reviews",
-    "keywords": ["search strategy", "keywords", "subject headings", "systematic review", "scoping review", "database search"],
+    "keywords": [
+      "search strategy",
+      "keywords",
+      "subject headings",
+      "systematic review",
+      "scoping review",
+      "database search"
+    ],
     "status": "caution",
     "answer": "AI can suggest keywords, spelling variants, related concepts or possible subject headings, but the final database selection, syntax, testing, peer review and documentation must remain human-led.",
-    "why": ["AI-generated strategies may be incomplete, irreproducible or incorrectly translated across databases."],
+    "why": [
+      "AI-generated strategies may be incomplete, irreproducible or incorrectly translated across databases."
+    ],
     "actions": [
       "Verify every term and subject heading in each database.",
       "Test retrieval against known relevant studies.",
@@ -177,17 +330,33 @@
       "Seek peer review or library support for systematic-like reviews."
     ],
     "recording": "Report AI-assisted keyword generation or concept mapping where it materially influenced the search method.",
-    "sections": ["Recommendation 6", "Section 7", "Appendix C"],
-    "support": ["Library research support", "Supervisor"]
+    "sections": [
+      "Recommendation 6",
+      "Section 7",
+      "Appendix C"
+    ],
+    "support": [
+      "Library research support",
+      "Supervisor"
+    ]
   },
   {
     "id": "screening",
     "title": "Can AI screen articles for a systematic or scoping review?",
     "category": "Literature searching and reviews",
-    "keywords": ["screening", "title abstract", "full text", "systematic review", "scoping review", "prioritisation"],
+    "keywords": [
+      "screening",
+      "title abstract",
+      "full text",
+      "systematic review",
+      "scoping review",
+      "prioritisation"
+    ],
     "status": "caution",
     "answer": "AI may prioritise records, highlight potentially relevant abstracts or support consistency checking, but final include/exclude decisions and conflict resolution must remain human-led. Tool performance may require validation in the specific review context.",
-    "why": ["Errors or bias in screening can affect the completeness and conclusions of the review."],
+    "why": [
+      "Errors or bias in screening can affect the completeness and conclusions of the review."
+    ],
     "actions": [
       "Assess whether the tool has been validated for the task and context.",
       "Predefine acceptable performance and human verification.",
@@ -195,17 +364,34 @@
       "Report the tool, workflow, validation and limitations."
     ],
     "recording": "Treat prompts and settings used for screening as part of the research method and retain them in the AI-use log.",
-    "sections": ["Recommendation 6", "Levels of AI tool use", "Appendix B", "Appendix E"],
-    "support": ["Library research support", "Review methodologist", "Supervisor"]
+    "sections": [
+      "Recommendation 6",
+      "Levels of AI tool use",
+      "Appendix B",
+      "Appendix E"
+    ],
+    "support": [
+      "Library research support",
+      "Review methodologist",
+      "Supervisor"
+    ]
   },
   {
     "id": "data-extraction",
     "title": "Can AI extract data from included studies?",
     "category": "Literature searching and reviews",
-    "keywords": ["data extraction", "extract", "included studies", "systematic review", "scoping review"],
+    "keywords": [
+      "data extraction",
+      "extract",
+      "included studies",
+      "systematic review",
+      "scoping review"
+    ],
     "status": "caution",
     "answer": "AI can help create draft extraction fields or produce preliminary extraction, but every extracted item must be checked against the source article. Validation may be required before the tool is relied on for the review.",
-    "why": ["Incorrect extraction can propagate into synthesis and conclusions."],
+    "why": [
+      "Incorrect extraction can propagate into synthesis and conclusions."
+    ],
     "actions": [
       "Pilot the tool on a representative sample.",
       "Define and test verification procedures.",
@@ -213,17 +399,33 @@
       "Report the tool and human verification process."
     ],
     "recording": "Record prompts, tool version, sample testing, errors, corrections and verification.",
-    "sections": ["Recommendation 6", "Appendix B", "Appendix E"],
-    "support": ["Review methodologist", "Library research support", "Supervisor"]
+    "sections": [
+      "Recommendation 6",
+      "Appendix B",
+      "Appendix E"
+    ],
+    "support": [
+      "Review methodologist",
+      "Library research support",
+      "Supervisor"
+    ]
   },
   {
     "id": "synthesis",
     "title": "Can AI synthesise the findings of a literature review?",
     "category": "Literature searching and reviews",
-    "keywords": ["synthesis", "themes", "narrative synthesis", "evidence synthesis", "summarise findings"],
+    "keywords": [
+      "synthesis",
+      "themes",
+      "narrative synthesis",
+      "evidence synthesis",
+      "summarise findings"
+    ],
     "status": "caution",
     "answer": "AI may suggest possible themes, tables or narrative structures, but it should not replace human methodological judgement, interpretation, critical appraisal or final synthesis. AI-generated summaries are not themselves evidence synthesis.",
-    "why": ["Synthesis requires decisions about comparability, uncertainty, heterogeneity, quality and evidentiary support."],
+    "why": [
+      "Synthesis requires decisions about comparability, uncertainty, heterogeneity, quality and evidentiary support."
+    ],
     "actions": [
       "Base synthesis on verified extracted data and original sources.",
       "Retain human-led interpretation and judgement.",
@@ -231,17 +433,34 @@
       "Declare material use."
     ],
     "recording": "Document prompts, outputs used, revisions, rejected suggestions and human verification.",
-    "sections": ["Recommendation 6", "Recommendation 4", "Appendix B"],
-    "support": ["Review methodologist", "Supervisor"]
+    "sections": [
+      "Recommendation 6",
+      "Recommendation 4",
+      "Appendix B"
+    ],
+    "support": [
+      "Review methodologist",
+      "Supervisor"
+    ]
   },
   {
     "id": "analysis-code",
     "title": "Can AI help write or check analysis code?",
     "category": "Data analysis and coding",
-    "keywords": ["code", "r", "python", "stata", "spss", "analysis", "debug"],
+    "keywords": [
+      "code",
+      "r",
+      "python",
+      "stata",
+      "spss",
+      "analysis",
+      "debug"
+    ],
     "status": "caution",
     "answer": "AI may assist with developing, explaining or checking code, but the researcher remains responsible for methodological appropriateness, testing, validation, reproducibility and interpretation. Do not include restricted data in prompts.",
-    "why": ["Plausible-looking code can contain methodological, statistical or security errors."],
+    "why": [
+      "Plausible-looking code can contain methodological, statistical or security errors."
+    ],
     "actions": [
       "Test code on synthetic or approved data.",
       "Check the method against disciplinary guidance.",
@@ -249,34 +468,66 @@
       "Retain code, prompts and version information."
     ],
     "recording": "Record tool, version, prompts or prompt summaries, code changes, tests and human verification.",
-    "sections": ["Section 7: Data analysis", "Section 8", "Appendix B", "Appendix C"],
-    "support": ["Supervisor", "Statistician or methodologist", "Research Data Management support"]
+    "sections": [
+      "Section 7: Data analysis",
+      "Section 8",
+      "Appendix B",
+      "Appendix C"
+    ],
+    "support": [
+      "Supervisor",
+      "Statistician or methodologist",
+      "Research Data Management support"
+    ]
   },
   {
     "id": "statistics-advice",
     "title": "Can I rely on AI advice about statistical tests or missing data?",
     "category": "Data analysis and coding",
-    "keywords": ["statistics", "statistical test", "missing data", "imputation", "method", "analysis advice"],
+    "keywords": [
+      "statistics",
+      "statistical test",
+      "missing data",
+      "imputation",
+      "method",
+      "analysis advice"
+    ],
     "status": "caution",
     "answer": "No AI output should be relied on without checking it against disciplinary methods guidance and appropriate expert advice. Researchers remain responsible for ensuring analytical decisions are methodologically appropriate, justified and disclosed.",
-    "why": ["AI may recommend an incorrect test, assumption, coding approach or transformation with high confidence."],
+    "why": [
+      "AI may recommend an incorrect test, assumption, coding approach or transformation with high confidence."
+    ],
     "actions": [
       "Check primary methods sources.",
       "Seek supervisor, statistical or methodological advice.",
       "Validate assumptions and document decisions."
     ],
     "recording": "Record material AI advice and how it was independently verified or rejected.",
-    "sections": ["Recommendation 4", "Section 8"],
-    "support": ["Statistician or methodologist", "Supervisor"]
+    "sections": [
+      "Recommendation 4",
+      "Section 8"
+    ],
+    "support": [
+      "Statistician or methodologist",
+      "Supervisor"
+    ]
   },
   {
     "id": "translation-source",
     "title": "Can AI translate research material?",
     "category": "Writing, editing and translation",
-    "keywords": ["translation", "language", "multilingual", "participant material", "source material"],
+    "keywords": [
+      "translation",
+      "language",
+      "multilingual",
+      "participant material",
+      "source material"
+    ],
     "status": "caution",
     "answer": "AI translation should be treated as a draft, not a definitive translation. Do not enter unpublished participant or confidential material into a public tool without consent and ethics approval. Cite the original source and review specialised or culturally specific language carefully.",
-    "why": ["Accuracy may be poor for specialised terminology, dialects, low-resource languages and culturally specific concepts."],
+    "why": [
+      "Accuracy may be poor for specialised terminology, dialects, low-resource languages and culturally specific concepts."
+    ],
     "actions": [
       "Use appropriate human or domain review.",
       "Protect confidential and participant material.",
@@ -284,17 +535,33 @@
       "Check course-level requirements for Honours work."
     ],
     "recording": "Acknowledge material translation assistance and record the tool and review process.",
-    "sections": ["Recommendation 7", "Section 8"],
-    "support": ["Supervisor", "Human Research Ethics Committee", "Language or cultural expert"]
+    "sections": [
+      "Recommendation 7",
+      "Section 8"
+    ],
+    "support": [
+      "Supervisor",
+      "Human Research Ethics Committee",
+      "Language or cultural expert"
+    ]
   },
   {
     "id": "ai-images-paper",
     "title": "Can I use an AI-generated image in a journal article?",
     "category": "Images, diagrams and multimedia",
-    "keywords": ["image", "figure", "diagram", "journal", "publication", "ai generated"],
+    "keywords": [
+      "image",
+      "figure",
+      "diagram",
+      "journal",
+      "publication",
+      "ai generated"
+    ],
     "status": "caution",
     "answer": "AI-generated images are generally not appropriate for scientific figures, quantitative visualisations or diagrams requiring factual precision. Publisher rules vary and may prohibit them. Any permitted use must be clearly labelled and disclosed.",
-    "why": ["Image generators may produce inaccurate details, biased representations and uncertain copyright status."],
+    "why": [
+      "Image generators may produce inaccurate details, biased representations and uncertain copyright status."
+    ],
     "actions": [
       "Check the target journal or publisher policy before creating or submitting the image.",
       "Use validated tools for figures based on actual data.",
@@ -302,132 +569,248 @@
       "Label and disclose permitted AI-generated content."
     ],
     "recording": "Record the tool, version, date, prompt, edits and disclosure location.",
-    "sections": ["Recommendation 8", "Section 11", "Appendix C"],
-    "support": ["Target publisher or journal", "Library publishing support", "Library Copyright adviser"]
+    "sections": [
+      "Recommendation 8",
+      "Section 11",
+      "Appendix C"
+    ],
+    "support": [
+      "Target publisher or journal",
+      "Library publishing support",
+      "Library Copyright adviser"
+    ]
   },
   {
     "id": "grant-writing",
     "title": "Can applicants use AI when preparing ARC or NHMRC grant applications?",
     "category": "Grants, publishing and peer review",
-    "keywords": ["arc", "nhmrc", "grant", "application", "funder", "clarity"],
+    "keywords": [
+      "arc",
+      "nhmrc",
+      "grant",
+      "application",
+      "funder",
+      "clarity"
+    ],
     "status": "caution",
     "answer": "Applicants may use AI as a support tool when preparing ARC or NHMRC grant applications, but responsibility for accuracy, integrity and authorship remains with the applicant. Anything entered into a public AI tool should be treated as potentially public.",
-    "why": ["Funding-body requirements supplement University guidance and may change."],
+    "why": [
+      "Funding-body requirements supplement University guidance and may change."
+    ],
     "actions": [
       "Check the current funder policy and funding agreement.",
       "Do not enter confidential, partner-owned or restricted material into a public tool.",
       "Verify all content and disclose use where required."
     ],
     "recording": "Retain a proportionate record of material AI assistance and any required declaration.",
-    "sections": ["Section 10: Funder Requirements"],
-    "support": ["Research Office", "Supervisor or project lead", "Relevant funder policy"]
+    "sections": [
+      "Section 10: Funder Requirements"
+    ],
+    "support": [
+      "Research Office",
+      "Supervisor or project lead",
+      "Relevant funder policy"
+    ]
   },
   {
     "id": "grant-reviewer",
     "title": "Can an ARC or NHMRC assessor use AI when reviewing an application?",
     "category": "Grants, publishing and peer review",
-    "keywords": ["reviewer", "assessor", "peer review", "arc", "nhmrc", "confidential grant"],
+    "keywords": [
+      "reviewer",
+      "assessor",
+      "peer review",
+      "arc",
+      "nhmrc",
+      "confidential grant"
+    ],
     "status": "prohibited",
     "answer": "Assessors must not use AI to form an opinion on an application and must not upload application material into a public AI tool. Limited assistance with grammar, spelling, formatting and readability of the assessor's own drafted comments may be permitted under the current ARC and NHMRC policies.",
-    "why": ["Grant applications are confidential and expert judgement must remain human-led."],
+    "why": [
+      "Grant applications are confidential and expert judgement must remain human-led."
+    ],
     "actions": [
       "Follow the current funder instructions exactly.",
       "Do not upload application content to public AI tools.",
       "Be transparent about permitted AI use when requested."
     ],
     "recording": "Retain any record required by the funder or assessment process.",
-    "sections": ["Section 10: ARC and NHMRC updated joint policy"],
-    "support": ["ARC or NHMRC guidance", "Research Office"]
+    "sections": [
+      "Section 10: ARC and NHMRC updated joint policy"
+    ],
+    "support": [
+      "ARC or NHMRC guidance",
+      "Research Office"
+    ]
   },
   {
     "id": "peer-review-manuscript",
     "title": "Can I upload a manuscript I am peer reviewing into AI?",
     "category": "Grants, publishing and peer review",
-    "keywords": ["peer review", "reviewer", "manuscript", "confidential", "editor"],
+    "keywords": [
+      "peer review",
+      "reviewer",
+      "manuscript",
+      "confidential",
+      "editor"
+    ],
     "status": "prohibited",
     "answer": "Do not upload confidential peer-review material, manuscripts or reviewer comments into a public AI tool. Use is only possible where the publisher or review process explicitly permits it and the tool is approved for that purpose.",
-    "why": ["Peer-review material is confidential and may contain unpublished intellectual property."],
+    "why": [
+      "Peer-review material is confidential and may contain unpublished intellectual property."
+    ],
     "actions": [
       "Check the publisher's reviewer policy.",
       "Protect all manuscript and reviewer material.",
       "Do not allow AI to replace expert judgement."
     ],
     "recording": "Declare permitted material AI use where required by the review process.",
-    "sections": ["Section 11: Thesis examiners and assessors", "Roles and Responsibilities"],
-    "support": ["Publisher or journal editor", "Research integrity support"]
+    "sections": [
+      "Section 11: Thesis examiners and assessors",
+      "Roles and Responsibilities"
+    ],
+    "support": [
+      "Publisher or journal editor",
+      "Research integrity support"
+    ]
   },
   {
     "id": "thesis-examiner",
     "title": "Can a thesis examiner use AI when examining a thesis?",
     "category": "Grants, publishing and peer review",
-    "keywords": ["thesis examiner", "examination", "confidential thesis", "assessment"],
+    "keywords": [
+      "thesis examiner",
+      "examination",
+      "confidential thesis",
+      "assessment"
+    ],
     "status": "prohibited",
     "answer": "A thesis examiner should not upload a thesis, examination report or related confidential material into a public or commercial AI tool unless the relevant University process explicitly permits this and the tool is approved for the purpose.",
-    "why": ["Theses under examination are confidential and expert judgement must not be outsourced."],
+    "why": [
+      "Theses under examination are confidential and expert judgement must not be outsourced."
+    ],
     "actions": [
       "Follow the University's examination instructions.",
       "Protect unpublished and confidential material.",
       "Use AI only where explicitly permitted and disclose it if required."
     ],
     "recording": "Follow the relevant examination process for any permitted disclosure or record keeping.",
-    "sections": ["Roles and Responsibilities", "Section 11"],
-    "support": ["Graduate Research Office", "Research integrity support"]
+    "sections": [
+      "Roles and Responsibilities",
+      "Section 11"
+    ],
+    "support": [
+      "Graduate Research Office",
+      "Research integrity support"
+    ]
   },
   {
     "id": "publisher-policy",
     "title": "Do publisher rules override this guidance?",
     "category": "Grants, publishing and peer review",
-    "keywords": ["publisher", "journal policy", "author guidelines", "submission", "override"],
+    "keywords": [
+      "publisher",
+      "journal policy",
+      "author guidelines",
+      "submission",
+      "override"
+    ],
     "status": "caution",
     "answer": "Publisher, journal, conference and funder requirements may supplement or be more restrictive than University guidance. Researchers must check the current requirements for the specific output before submission.",
-    "why": ["Rules differ across publishers and change over time."],
+    "why": [
+      "Rules differ across publishers and change over time."
+    ],
     "actions": [
       "Check the current author guidelines.",
       "Review disclosure, image, authorship and confidentiality requirements.",
       "Retain evidence of the policy consulted."
     ],
     "recording": "Use the declaration format required by the target outlet and retain an AI-use log where appropriate.",
-    "sections": ["Section 11", "Appendix C"],
-    "support": ["Library publishing support", "Target publisher or journal"]
+    "sections": [
+      "Section 11",
+      "Appendix C"
+    ],
+    "support": [
+      "Library publishing support",
+      "Target publisher or journal"
+    ]
   },
   {
     "id": "ai-author",
     "title": "Can an AI tool be listed as an author?",
     "category": "Writing, editing and translation",
-    "keywords": ["author", "authorship", "chatgpt author", "copilot author"],
+    "keywords": [
+      "author",
+      "authorship",
+      "chatgpt author",
+      "copilot author"
+    ],
     "status": "prohibited",
     "answer": "No. AI tools cannot take responsibility, provide consent or meet authorship requirements and must not be listed as authors.",
-    "why": ["Authorship requires accountability that an AI system cannot assume."],
-    "actions": ["Acknowledge or declare material AI assistance in the appropriate section instead."],
+    "why": [
+      "Authorship requires accountability that an AI system cannot assume."
+    ],
+    "actions": [
+      "Acknowledge or declare material AI assistance in the appropriate section instead."
+    ],
     "recording": "Record material AI use and follow the required declaration format.",
-    "sections": ["Core Principles", "Recommendation 3", "Section 11"],
-    "support": ["Target publisher or journal", "Research integrity support"]
+    "sections": [
+      "Core Principles",
+      "Recommendation 3",
+      "Section 11"
+    ],
+    "support": [
+      "Target publisher or journal",
+      "Research integrity support"
+    ]
   },
   {
     "id": "ethics-documents",
     "title": "Can AI help draft participant information or consent documents?",
     "category": "Participant data and ethics",
-    "keywords": ["participant information", "consent form", "ethics application", "plain language", "draft"],
+    "keywords": [
+      "participant information",
+      "consent form",
+      "ethics application",
+      "plain language",
+      "draft"
+    ],
     "status": "caution",
     "answer": "AI may help draft or improve the clarity of participant information and consent documents, but it cannot replace ethics review. Do not enter sensitive project details into an inappropriate tool, and ensure the final documents accurately describe the proposed research and AI use.",
-    "why": ["Incorrect or incomplete wording may affect informed consent and ethical approval."],
+    "why": [
+      "Incorrect or incomplete wording may affect informed consent and ethical approval."
+    ],
     "actions": [
       "Verify all content against the protocol and approved data flow.",
       "Describe relevant AI processing, storage and verification clearly.",
       "Submit documents through the normal ethics review process."
     ],
     "recording": "Record material drafting assistance where appropriate.",
-    "sections": ["Section 7: Ethics and governance", "Section 8"],
-    "support": ["Human Research Ethics Committee", "Supervisor or project lead"]
+    "sections": [
+      "Section 7: Ethics and governance",
+      "Section 8"
+    ],
+    "support": [
+      "Human Research Ethics Committee",
+      "Supervisor or project lead"
+    ]
   },
   {
     "id": "ai-transcription",
     "title": "Can I use an AI transcription service for research interviews?",
     "category": "Participant data and ethics",
-    "keywords": ["transcription", "recording", "interview audio", "captioning", "third party"],
+    "keywords": [
+      "transcription",
+      "recording",
+      "interview audio",
+      "captioning",
+      "third party"
+    ],
     "status": "approval",
     "answer": "AI transcription may be possible only where ethics approval, participant consent, data security, storage, confidentiality and tool conditions permit it. Participants should be informed where a third-party AI service processes or stores recordings.",
-    "why": ["Transcription changes the data flow and may involve offshore or third-party processing. Accuracy may vary across accents, dialects and audio quality."],
+    "why": [
+      "Transcription changes the data flow and may involve offshore or third-party processing. Accuracy may vary across accents, dialects and audio quality."
+    ],
     "actions": [
       "Check ethics and consent wording.",
       "Confirm storage, processing location and provider retention terms.",
@@ -435,75 +818,150 @@
       "Check transcripts against the recording before analysis."
     ],
     "recording": "Record the service, version, processing arrangements, accuracy checking and any corrections.",
-    "sections": ["Section 7: Data collection", "Section 8"],
-    "support": ["Human Research Ethics Committee", "Privacy and information security", "Research Data Management support"]
+    "sections": [
+      "Section 7: Data collection",
+      "Section 8"
+    ],
+    "support": [
+      "Human Research Ethics Committee",
+      "Privacy and information security",
+      "Research Data Management support"
+    ]
   },
   {
     "id": "indigenous-knowledge",
     "title": "Can I enter Indigenous knowledges or culturally restricted material into AI?",
     "category": "Copyright, privacy and confidential material",
-    "keywords": ["indigenous", "aboriginal", "torres strait islander", "cultural knowledge", "restricted", "data sovereignty"],
+    "keywords": [
+      "indigenous",
+      "aboriginal",
+      "torres strait islander",
+      "cultural knowledge",
+      "restricted",
+      "data sovereignty",
+      "first nation",
+      "first nations",
+      "first nations peoples"
+    ],
     "status": "prohibited",
     "answer": "Do not enter Indigenous knowledges, community data, restricted cultural material or unpublished community narratives into AI tools unless explicit ethics, cultural governance, community permission, data sovereignty and University approvals are in place.",
-    "why": ["Public AI tools may expose, appropriate, decontextualise or misrepresent culturally sensitive knowledge."],
+    "why": [
+      "Public AI tools may expose, appropriate, decontextualise or misrepresent culturally sensitive knowledge."
+    ],
     "actions": [
       "Consult community partners and relevant Indigenous research governance processes.",
       "Confirm ethics and cultural permissions.",
       "Check outputs for authority, accuracy, cultural safety and representation."
     ],
     "recording": "Follow the project's approved cultural governance and records requirements.",
-    "sections": ["Section 9", "Core Principles: Equity, inclusion and cultural safety"],
-    "support": ["Indigenous research governance contacts", "Community partners", "Human Research Ethics Committee", "Supervisor"]
+    "sections": [
+      "Section 9",
+      "Core Principles: Equity, inclusion and cultural safety"
+    ],
+    "support": [
+      "Indigenous research governance contacts",
+      "Community partners",
+      "Human Research Ethics Committee",
+      "Supervisor"
+    ]
   },
   {
     "id": "commercial-data",
     "title": "Can I upload partner or commercial-in-confidence data into AI?",
     "category": "Copyright, privacy and confidential material",
-    "keywords": ["commercial", "partner data", "contract", "confidential", "industry"],
+    "keywords": [
+      "commercial",
+      "partner data",
+      "contract",
+      "confidential",
+      "industry"
+    ],
     "status": "approval",
     "answer": "Do not upload commercial-in-confidence or partner-owned data into a public AI tool. Use of an approved tool is possible only where contracts, collaboration agreements, confidentiality obligations and governance arrangements permit it.",
-    "why": ["AI use may breach contractual confidentiality, data handling or intellectual property provisions."],
+    "why": [
+      "AI use may breach contractual confidentiality, data handling or intellectual property provisions."
+    ],
     "actions": [
       "Check the contract and collaboration agreement.",
       "Confirm tool and data governance approvals.",
       "Seek advice before proceeding."
     ],
     "recording": "Record approvals, tool use and verification in accordance with project requirements.",
-    "sections": ["Recommendation 2", "Section 7: Collaboration and third-party interactions"],
-    "support": ["Project lead", "Research Office", "Privacy and information security"]
+    "sections": [
+      "Recommendation 2",
+      "Section 7: Collaboration and third-party interactions"
+    ],
+    "support": [
+      "Project lead",
+      "Research Office",
+      "Privacy and information security"
+    ]
   },
   {
     "id": "brainstorm-topic",
     "title": "Can I use AI to brainstorm a research topic or question?",
     "category": "Research ideas and methods",
-    "keywords": ["brainstorm", "research topic", "research question", "pico", "pcc", "ideas"],
+    "keywords": [
+      "brainstorm",
+      "research topic",
+      "research question",
+      "pico",
+      "pcc",
+      "ideas"
+    ],
     "status": "acceptable",
     "answer": "AI can support brainstorming, concept mapping and testing possible question frameworks, but the final intellectual framing, rationale and inclusion criteria must remain researcher-led and grounded in scholarly literature.",
-    "why": ["AI framing may narrow the topic, privilege dominant perspectives or omit disciplinary nuance."],
+    "why": [
+      "AI framing may narrow the topic, privilege dominant perspectives or omit disciplinary nuance."
+    ],
     "actions": [
       "Treat suggestions as provisional.",
       "Check the literature and disciplinary context.",
       "Discuss material influence with your supervisor."
     ],
     "recording": "Record and declare the use if it materially shapes the research question or design.",
-    "sections": ["Recommendation 1", "Recommendation 4", "Section 7"],
-    "support": ["Supervisor", "Library research support"]
+    "sections": [
+      "Recommendation 1",
+      "Recommendation 4",
+      "Section 7"
+    ],
+    "support": [
+      "Supervisor",
+      "Library research support"
+    ]
   },
   {
     "id": "methods-advice",
     "title": "Can AI recommend a research method?",
     "category": "Research ideas and methods",
-    "keywords": ["methodology", "research method", "design", "qualitative", "quantitative", "recommend"],
+    "keywords": [
+      "methodology",
+      "research method",
+      "design",
+      "qualitative",
+      "quantitative",
+      "recommend"
+    ],
     "status": "caution",
     "answer": "AI may explain or compare methodological options, but research design decisions must be justified using scholarly methods literature, disciplinary standards and appropriate supervision rather than AI alone.",
-    "why": ["AI may provide inaccurate, generic or context-insensitive methods advice."],
+    "why": [
+      "AI may provide inaccurate, generic or context-insensitive methods advice."
+    ],
     "actions": [
       "Verify advice against primary methods sources.",
       "Consider ethics, feasibility and disciplinary standards.",
       "Seek supervisor or methodological advice."
     ],
     "recording": "Record material AI influence on research design and how it was verified.",
-    "sections": ["Recommendation 1", "Recommendation 4", "Section 7"],
-    "support": ["Supervisor", "Methodologist", "Library research support"]
+    "sections": [
+      "Recommendation 1",
+      "Recommendation 4",
+      "Section 7"
+    ],
+    "support": [
+      "Supervisor",
+      "Methodologist",
+      "Library research support"
+    ]
   }
 ]

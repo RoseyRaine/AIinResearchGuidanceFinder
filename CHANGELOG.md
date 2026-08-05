@@ -1,3 +1,13 @@
+# Changelog
+
+## 0.2.8 — 5 August 2026
+- Added a separate CSU-styled Quick Decision Guide page and navigation tab.
+- Formatted each example and condition on its own line and enlarged status icons.
+- Added First Nation and First Nations search aliases for Indigenous guidance.
+- Added descriptive hover/focus tooltips to navigation options.
+- Added the supplied CSU logo.
+- Added CC BY 4.0 licensing and a ChatGPT development acknowledgement.
+
 ## 0.2.6 — Full guidance integration
 - Added the complete draft guidance as `guide.html`.
 - Added direct links from each Guideline basis item to the relevant section.
