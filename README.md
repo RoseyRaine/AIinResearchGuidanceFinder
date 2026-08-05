@@ -18,7 +18,7 @@ A static, accessible decision-support website designed for GitHub Pages and embe
 
 ## Important status
 
-This is a prototype based on the 2026 draft *Advice Relating to the Use of Artificial Intelligence in Research*. All wording, support pathways, branding, links and governance statements must be reviewed and formally approved before publication.
+This resource is based on the 2026 draft *Advice Relating to the Use of Artificial Intelligence in Research*. All wording, support pathways, branding, links and governance statements should be reviewed and formally approved before publication.
 
 ## Test locally
 
@@ -111,4 +111,4 @@ Edit `data/pathways.json`.
 
 
 ## Brand note
-This prototype uses the approved Charles Sturt colour values and Arial as the approved system substitute for Basis Grotesque. The header currently uses a clearly simplified prototype brand lock-up. Before public release, replace it with the official approved horizontal Charles Sturt University logo artwork supplied by the Brand and Performance Marketing team; do not redraw or alter the official logo.
+This resource uses the approved Charles Sturt colour values and Arial as the approved system substitute for Basis Grotesque. Use only approved Charles Sturt University logo artwork supplied by the Brand and Performance Marketing team; do not redraw or alter the official logo.

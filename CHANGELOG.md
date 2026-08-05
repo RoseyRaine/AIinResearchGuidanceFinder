@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 — Navigation and licence refinements
+
+- Made the research lifecycle support text clickable and keyboard-accessible, linking to the tool navigation.
+- Replaced the Creative Commons artwork with the supplied CC BY image.
+- Matched the Quick decision guide and View full guidance navigation colours to the other tabs, including visited-link states.
+- Removed visible prototype labels and prototype wording.
+- Repositioned tab descriptions below the controls and aligned edge tooltips to prevent clipping in LibGuides iframes.
+
 ## 0.3.0 — Interactive title prototype
 
 - Added a cursor-responsive letter wave to the main title.

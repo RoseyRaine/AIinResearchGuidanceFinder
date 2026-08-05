@@ -365,3 +365,62 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
   }
   .interactive-title.is-active .title-letter.is-near { color: inherit; }
 }
+
+
+/* v0.3.1 navigation, licence and embedded-layout refinements */
+.mode-link,
+.mode-link:visited {
+  color: var(--charcoal);
+  text-decoration: none;
+}
+.mode-link:hover,
+.mode-link:focus-visible {
+  color: var(--charcoal);
+}
+.has-tooltip::after {
+  top: calc(100% + 10px);
+  bottom: auto;
+  transform: translate(-50%, -6px);
+}
+.has-tooltip:hover::after,
+.has-tooltip:focus-visible::after {
+  transform: translate(-50%, 0);
+}
+.mode-switch > .has-tooltip:first-child::after {
+  left: 0;
+  transform: translate(0, -6px);
+}
+.mode-switch > .has-tooltip:first-child:hover::after,
+.mode-switch > .has-tooltip:first-child:focus-visible::after {
+  transform: translate(0, 0);
+}
+.mode-switch > .has-tooltip:last-child::after {
+  left: auto;
+  right: 0;
+  transform: translate(0, -6px);
+}
+.mode-switch > .has-tooltip:last-child:hover::after,
+.mode-switch > .has-tooltip:last-child:focus-visible::after {
+  transform: translate(0, 0);
+}
+.lifecycle-cue {
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 10px;
+}
+.lifecycle-cue:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 5px;
+}
+.lifecycle-cue:hover .lifecycle-arrow,
+.lifecycle-cue:focus-visible .lifecycle-arrow {
+  transform: translateX(5px);
+}
+.licence-block img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+.header-grid {
+  justify-content: flex-start;
+}

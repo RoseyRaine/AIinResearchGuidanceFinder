@@ -108,6 +108,7 @@ function initInteractiveTitle() {
   const title = el('page-title');
   const phrase = el('lifecyclePhrase');
   const target = el('tool-options');
+  const cue = el('lifecycleCue');
   if (!title || !phrase || !target) return;
 
   const titleText = 'AI in Research Decision Tool';
@@ -229,6 +230,21 @@ function initInteractiveTitle() {
       target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
     }
   });
+
+  if (cue) {
+    const goToToolOptions = () => {
+      if (!finePointer.matches) playTouchWave();
+      target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    };
+    cue.addEventListener('click', goToToolOptions);
+    cue.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        goToToolOptions();
+      }
+    });
+  }
+
 
   if (!finePointer.matches && 'IntersectionObserver' in window && !reduceMotion.matches) {
     const observer = new IntersectionObserver(entries => {
