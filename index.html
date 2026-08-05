@@ -12,7 +12,7 @@
   <header class="site-header">
     <div class="shell header-grid">
       <div class="brand-block" aria-label="Charles Sturt University">
-        <div class="brand-mark" aria-hidden="true">CS</div>
+        <img class="brand-logo" src="assets/csu-logo.png" alt="Charles Sturt University">
         <div class="brand-name">Charles Sturt<br>University</div>
       </div>
       <div class="prototype-chip">Prototype</div>
@@ -35,10 +35,11 @@
     </section>
 
     <nav class="mode-switch" aria-label="Choose how to use the tool">
-      <button class="mode-button is-active" id="tab-guide" type="button" aria-controls="guide-panel" aria-selected="true">Guide me</button>
-      <button class="mode-button" id="tab-search" type="button" aria-controls="search-panel" aria-selected="false">Search questions</button>
-      <button class="mode-button" id="tab-browse" type="button" aria-controls="browse-panel" aria-selected="false">Browse topics</button>
-      <a class="mode-button mode-link" href="guide.html">View full guidance</a>
+      <button class="mode-button is-active has-tooltip" id="tab-guide" type="button" aria-controls="guide-panel" aria-selected="true" data-tooltip="Step through a research task to identify where AI may be used and which checks apply.">Guide me</button>
+      <a class="mode-button mode-link has-tooltip" href="quick-guide.html" data-tooltip="See the four quick decision categories, examples and conditions at a glance.">Quick decision guide</a>
+      <button class="mode-button has-tooltip" id="tab-search" type="button" aria-controls="search-panel" aria-selected="false" data-tooltip="Search curated questions and controlled answers without entering sensitive details.">Search questions</button>
+      <button class="mode-button has-tooltip" id="tab-browse" type="button" aria-controls="browse-panel" aria-selected="false" data-tooltip="Browse questions grouped by research activity.">Browse topics</button>
+      <a class="mode-button mode-link has-tooltip" href="guide.html" data-tooltip="Read the complete 2026 draft AI in research guidance.">View full guidance</a>
     </nav>
 
     <section id="guide-panel" class="experience-card" aria-labelledby="tab-guide">
@@ -79,9 +80,9 @@
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div><strong>AI in Research Decision Tool</strong><p>Prototype based on the 2026 draft guidance. <a href="guide.html">View the full guidance</a>.</p></div>
-      <div><p><strong>Content version:</strong> 0.2.6 prototype</p><p><strong>Last reviewed:</strong> 3 August 2026</p></div>
+    <div class="shell footer-grid footer-expanded">
+      <div><strong>AI in Research Decision Tool</strong><p>Prototype based on the 2026 draft guidance. <a href="guide.html">View the full guidance</a>.</p><p>This interactive resource was developed with assistance from ChatGPT, using GPT-5.6 Thinking, and reviewed and edited by Charles Sturt University staff.</p></div>
+      <div class="licence-block"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer"><img src="assets/cc-by.svg" alt="Creative Commons Attribution 4.0 International"></a><p>Except for the Charles Sturt University name, logo and other branded elements, and any third-party material, this resource is licensed under a Creative Commons Attribution 4.0 International Licence.</p><p><strong>Content version:</strong> 0.2.8 prototype<br><strong>Last reviewed:</strong> 5 August 2026</p></div>
     </div>
   </footer>
   <script src="js/app.js" defer></script>
