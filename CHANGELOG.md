@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.0 — Interactive title prototype
+
+- Added a cursor-responsive letter wave to the main title.
+- Added research lifecycle phrases that change as the cursor moves across the title.
+- Added tap, keyboard and scroll-to-tool behaviour for touch and keyboard users.
+- Added a one-time mobile entrance wave and reduced-motion support.
+- Kept the title as accessible semantic text with an explicit interaction label.
+
+## 0.2.9 — 5 August 2026
+
+- Redesigned the Quick Decision Guide as a compact two-by-two matrix on desktop.
+- Reduced heading, card and list spacing so the four decision categories can be viewed together with substantially less scrolling.
+- Retained a readable single-column layout on tablets and phones.
+
 ## 0.2.8 — 5 August 2026
 - Added a separate CSU-styled Quick Decision Guide page and navigation tab.
 - Formatted each example and condition on its own line and enlarged status icons.

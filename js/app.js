@@ -95,11 +95,150 @@ async function loadData() {
 }
 
 function init() {
+  initInteractiveTitle();
   bindTabs();
   bindControls();
   renderGuide();
   renderCategories();
   renderSearchResults(state.questions.slice(0, 8), 'Popular questions');
+}
+
+
+function initInteractiveTitle() {
+  const title = el('page-title');
+  const phrase = el('lifecyclePhrase');
+  const target = el('tool-options');
+  if (!title || !phrase || !target) return;
+
+  const titleText = 'AI in Research Decision Tool';
+  const lifecycle = [
+    'Develop a question',
+    'Design the method',
+    'Search the literature',
+    'Collect and manage data',
+    'Analyse responsibly',
+    'Write and publish'
+  ];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let phraseIndex = 0;
+  let touchTimer = null;
+
+  title.textContent = '';
+  title.setAttribute('aria-describedby', 'titleInteractionHelp');
+  titleText.split(' ').forEach((word, wordIndex, words) => {
+    const wordSpan = document.createElement('span');
+    wordSpan.className = 'title-word';
+    wordSpan.setAttribute('aria-hidden', 'true');
+    [...word].forEach(character => {
+      const letter = document.createElement('span');
+      letter.className = 'title-letter';
+      letter.textContent = character;
+      wordSpan.appendChild(letter);
+    });
+    title.appendChild(wordSpan);
+    if (wordIndex < words.length - 1) {
+      const space = document.createElement('span');
+      space.className = 'title-space';
+      space.setAttribute('aria-hidden', 'true');
+      title.appendChild(space);
+    }
+  });
+
+  const letters = [...title.querySelectorAll('.title-letter')];
+
+  function setPhrase(index) {
+    const next = ((index % lifecycle.length) + lifecycle.length) % lifecycle.length;
+    if (next === phraseIndex && phrase.textContent === lifecycle[next]) return;
+    phraseIndex = next;
+    if (reduceMotion.matches) {
+      phrase.textContent = lifecycle[next];
+      return;
+    }
+    phrase.classList.add('is-changing');
+    window.setTimeout(() => {
+      phrase.textContent = lifecycle[next];
+      phrase.classList.remove('is-changing');
+    }, 130);
+  }
+
+  function resetLetters() {
+    title.classList.remove('is-active');
+    letters.forEach(letter => {
+      letter.classList.remove('is-near');
+      letter.style.setProperty('--lift', '0px');
+      letter.style.setProperty('--scale', '1');
+      letter.style.setProperty('--tilt', '0deg');
+    });
+  }
+
+  function animateFromPoint(clientX, clientY) {
+    if (reduceMotion.matches) return;
+    title.classList.add('is-active');
+    letters.forEach((letter, index) => {
+      const rect = letter.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      const distance = Math.hypot(clientX - x, (clientY - y) * 1.35);
+      const influence = Math.max(0, 1 - distance / 115);
+      const lift = -14 * influence;
+      const scale = 1 + .055 * influence;
+      const tilt = ((clientX - x) / 115) * 2.4 * influence;
+      letter.style.setProperty('--lift', `${lift.toFixed(2)}px`);
+      letter.style.setProperty('--scale', scale.toFixed(3));
+      letter.style.setProperty('--tilt', `${tilt.toFixed(2)}deg`);
+      letter.classList.toggle('is-near', influence > .42);
+    });
+    const rect = title.getBoundingClientRect();
+    const ratio = Math.min(.999, Math.max(0, (clientX - rect.left) / Math.max(rect.width, 1)));
+    setPhrase(Math.floor(ratio * lifecycle.length));
+  }
+
+  function playTouchWave() {
+    if (reduceMotion.matches) return;
+    window.clearInterval(touchTimer);
+    let step = 0;
+    touchTimer = window.setInterval(() => {
+      const titleRect = title.getBoundingClientRect();
+      const ratio = step / 20;
+      animateFromPoint(titleRect.left + titleRect.width * ratio, titleRect.top + titleRect.height * .5);
+      setPhrase(Math.min(lifecycle.length - 1, Math.floor(ratio * lifecycle.length)));
+      step += 1;
+      if (step > 20) {
+        window.clearInterval(touchTimer);
+        window.setTimeout(resetLetters, 220);
+      }
+    }, 38);
+  }
+
+  title.addEventListener('pointermove', event => {
+    if (finePointer.matches) animateFromPoint(event.clientX, event.clientY);
+  });
+  title.addEventListener('pointerleave', resetLetters);
+  title.addEventListener('focus', () => {
+    if (!finePointer.matches) playTouchWave();
+  });
+  title.addEventListener('click', () => {
+    if (!finePointer.matches) playTouchWave();
+    target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  });
+  title.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      playTouchWave();
+      target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    }
+  });
+
+  if (!finePointer.matches && 'IntersectionObserver' in window && !reduceMotion.matches) {
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        playTouchWave();
+        observer.disconnect();
+      }
+    }, { threshold: .65 });
+    observer.observe(title);
+  }
 }
 
 function bindTabs() {
