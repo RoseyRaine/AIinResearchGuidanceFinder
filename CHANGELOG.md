@@ -1,3 +1,10 @@
+## 0.4.1 — Quick Decision Guide readability
+
+- Changed the Quick Decision Guide accordions to a single-column vertical stack.
+- Corrected colour variables that caused poor contrast in the upload-checker callout.
+- Added a high-contrast CSU-aligned button style for the upload checker.
+- Improved open accordion borders and text contrast.
+
 # Changelog
 
 ## 0.4.0 — 2026-09-11
