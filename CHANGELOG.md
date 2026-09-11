@@ -97,3 +97,6 @@
 - Fixed the browse-by-activity layout so selected questions appear in a full-width section beneath the activity grid.
 - Added clear spacing and alignment between activity names and question counts.
 - Added a selected state for the active activity card.
+
+## 0.4.2
+- Fixed active navigation tab contrast so the selected tab label remains visible on the dark background.

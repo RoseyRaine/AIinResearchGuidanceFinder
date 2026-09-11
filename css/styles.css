@@ -484,3 +484,14 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 
 @media (max-width: 900px) { .quick-updated-grid { grid-template-columns:1fr; } .upload-checker-callout { grid-template-columns:1fr; } }
 @media (max-width: 620px) { .quick-pairs li { grid-template-columns:1fr; gap:.2rem; } .decision-summary summary { grid-template-columns:auto 1fr; } .decision-summary .decision-count { grid-column:2; } }
+
+/* v0.4.2 active navigation contrast fix */
+.mode-button.is-active,
+.mode-link.is-active,
+.mode-link.is-active:visited,
+.mode-link.is-active:hover,
+.mode-link.is-active:focus-visible {
+  background: var(--charcoal);
+  color: #f8f3ec;
+  border-color: var(--charcoal);
+}
