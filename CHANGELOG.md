@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0 — 2026-09-11
+
+- Updated all guidance content to the September 2026 draft.
+- Expanded the Quick Decision Guide to reflect the updated 29-row decision table while keeping the four categories compact and expandable.
+- Added the new definitions for public/consumer tools, self-hosted/local/controlled environments, embedded AI functionality, and controlled/export-restricted data.
+- Added updated guidance on paid subscriptions, Copilot/approved tools, embedded AI, methodological validation, prompt sensitivity, model/version variability and independent verification.
+- Added new controlled FAQ answers for paid subscriptions, embedded AI, controlled environments, controlled/export-restricted data, AI validation, collaborator discovery, upload checking and AI tool suitability.
+- Updated the guided pathway for substantive HDR/Honours drafting, embedded AI, controlled environments and the revised literature-search position.
+- Added contextual links to the CSU Library “Can I upload this to an AI tool?” checker.
+- Updated the full embedded guidance, including Appendix G.
+- Updated acknowledgement to ChatGPT (GPT-5.6 Sol).
+
 ## 0.3.1 — Navigation and licence refinements
 
 - Made the research lifecycle support text clickable and keyboard-accessible, linking to the tool navigation.

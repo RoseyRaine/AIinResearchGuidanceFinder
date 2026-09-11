@@ -23,11 +23,15 @@ const guidelineLinks = {
   'Core Principles: Equity, inclusion and cultural safety': 'guide.html#principle-equity-inclusion-cultural-safety',
   'Copyright and intellectual property principle': 'guide.html#principle-copyright-ip',
   'Definition: Material AI use': 'guide.html#definition-material-ai-use',
+  'Definition: Embedded AI functionality': 'guide.html#definitions-table',
+  'Definition: Self-hosted, local or controlled AI environment': 'guide.html#definitions-table',
+  'Definition: Controlled or export-restricted data': 'guide.html#definitions-table',
   'Roles and Responsibilities': 'guide.html#section-4',
   'Recommendation 1': 'guide.html#recommendation-1',
   'Recommendation 2': 'guide.html#recommendation-2',
   'Recommendation 3': 'guide.html#recommendation-3',
   'Recommendation 4': 'guide.html#recommendation-4',
+  'Recommendation 5': 'guide.html#recommendation-5',
   'Recommendation 6': 'guide.html#recommendation-6',
   'Recommendation 7': 'guide.html#recommendation-7',
   'Recommendation 8': 'guide.html#recommendation-8',
@@ -45,10 +49,15 @@ const guidelineLinks = {
   'Section 11': 'guide.html#section-11',
   'Section 11: Thesis examiners and assessors': 'guide.html#section-11-examiners',
   'Section 12': 'guide.html#section-12',
+  'Section 13': 'guide.html#section-13',
+  'Section 14': 'guide.html#section-14',
+  'Section 15': 'guide.html#section-15',
+  'Section 5': 'guide.html#section-5',
   'Appendix A': 'guide.html#appendix-a',
   'Appendix B': 'guide.html#appendix-b',
   'Appendix C': 'guide.html#appendix-c',
   'Appendix E': 'guide.html#appendix-e',
+  'Appendix G': 'guide.html#appendix-g',
   'Case Study 4': 'guide.html#case-study-4',
   'Case Study 6': 'guide.html#case-study-6'
 };
@@ -76,7 +85,8 @@ const supportLinks = {
   'Copyright and GenAI guidance': 'https://libguides.csu.edu.au/generativeAI/Copyright',
   'Review methodologist': 'https://library.csu.edu.au/our-libraries/contact-library-team/faculty-teams',
   'Methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
-  'Statistician or methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support'
+  'Statistician or methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
+  'AI upload checker': 'https://roseyraine.github.io/ai-upload-check/'
 };
 
 async function loadData() {
@@ -325,6 +335,7 @@ function renderPathwayResult(resultId) {
     </div>
     <h3>Before proceeding</h3>
     <ul>${result.actions.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+    ${result.externalLink ? `<div class="pathway-external"><a class="button button-primary" href="${escapeHtml(result.externalLink)}" target="_blank" rel="noopener noreferrer">${escapeHtml(result.externalLabel || 'Open related tool')}</a></div>` : ''}
     <div class="answer-actions no-print">
       <button class="button button-secondary" id="guideBack" type="button">Back</button>
       <button class="button button-primary" id="guideRestartResult" type="button">Start again</button>
@@ -475,6 +486,7 @@ function showAnswer(id) {
       ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>`)}
       ${accordionItem('Guideline basis', guidelineBasisList(question.sections))}
       ${accordionItem('Possible support pathways', supportList(question.support))}
+      ${question.uploadChecker ? `<div class="answer-related-tool"><p class="eyebrow">Related tool</p><h3>Need to check whether material can be uploaded?</h3><p>The Library upload checker gives a quick first check on copyright and platform terms. Other ethics, privacy, confidentiality, contractual or data-governance requirements may still apply.</p><a class="button button-secondary" href="https://roseyraine.github.io/ai-upload-check/" target="_blank" rel="noopener noreferrer">Can I upload this to an AI tool?</a></div>` : ''}
       <button id="printAnswer" class="mode-button" type="button">Print this result</button>
     </section>`;
   panel.hidden = false;

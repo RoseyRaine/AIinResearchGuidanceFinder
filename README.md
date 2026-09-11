@@ -112,3 +112,12 @@ Edit `data/pathways.json`.
 
 ## Brand note
 This resource uses the approved Charles Sturt colour values and Arial as the approved system substitute for Basis Grotesque. Use only approved Charles Sturt University logo artwork supplied by the Brand and Performance Marketing team; do not redraw or alter the official logo.
+
+
+## Related tool
+
+The decision tool links contextually to the CSU Library **Can I upload this to an AI tool?** checker:
+
+https://roseyraine.github.io/ai-upload-check/
+
+The upload checker provides a quick first check on copyright and platform terms; it does not replace ethics, privacy, confidentiality, contractual or data-governance requirements.

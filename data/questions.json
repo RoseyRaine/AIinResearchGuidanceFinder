@@ -12,16 +12,16 @@
       "copilot"
     ],
     "status": "approval",
-    "answer": "Do not upload interview transcripts or other participant data into a public AI tool. Use of a University-approved tool may only be considered where ethics approval, participant consent, the data management plan, confidentiality obligations and data governance requirements permit AI-assisted processing.",
+    "answer": "Do not upload interview transcripts, recordings, survey responses or other human research data into a public/consumer AI tool. AI-assisted processing may only be considered where ethics approval, participant consent, data governance requirements, the data management plan and the tool conditions permit the use; where approved, use an appropriate University-approved or protected tool.",
     "why": [
-      "Qualitative data may remain re-identifiable even after names are removed.",
-      "AI processing may change the approved data flow, storage location, access arrangements or method."
+      "Participant data may remain identifiable or re-identifiable even after direct identifiers are removed.",
+      "AI processing may alter the approved data flow, storage, access or research method."
     ],
     "actions": [
-      "Check whether AI-assisted analysis was described in the ethics application and participant information materials.",
-      "Confirm the proposed tool is approved for the type of data involved.",
-      "Discuss the use with the supervisor or project lead.",
-      "Seek ethics advice or an amendment where the proposed use was not covered."
+      "Check the ethics approval, participant information and consent materials.",
+      "Confirm that the proposed AI use and the specific tool or feature are permitted.",
+      "Check data governance and the data management plan.",
+      "Seek ethics advice or an amendment if the proposed use was not covered."
     ],
     "recording": "Record the tool, version, purpose, input type, prompts or prompt summary, outputs used and human verification steps in the project AI-use log.",
     "sections": [
@@ -35,7 +35,8 @@
       "Supervisor or project lead",
       "Research Data Management support",
       "Privacy and information security"
-    ]
+    ],
+    "uploadChecker": true
   },
   {
     "id": "deidentified-data",
@@ -50,7 +51,7 @@
       "dataset"
     ],
     "status": "caution",
-    "answer": "Possibly, but de-identification does not automatically make AI use low risk. Rich qualitative or linked datasets may remain re-identifiable. Use should be consistent with ethics approval, participant consent, governance requirements, the data management plan and the protections of the selected tool.",
+    "answer": "Possibly, but de-identification does not automatically make AI use safe. Rich qualitative or linked data may remain re-identifiable. Use must be consistent with ethics approval, participant consent, data governance, the data management plan and the conditions of the specific AI tool or feature.",
     "why": [
       "Removing direct identifiers may not remove contextual or linkage-based re-identification risk.",
       "The proposed AI use may not have been included in the approved research method."
@@ -58,7 +59,7 @@
     "actions": [
       "Assess residual re-identification risk.",
       "Confirm ethics, consent and governance permissions.",
-      "Use a University-approved tool where the use is permitted.",
+      "Check the specific AI feature, data handling and tool conditions.",
       "Validate and independently verify the analysis."
     ],
     "recording": "Document the data classification, tool, version, purpose, prompts, validation and verification process.",
@@ -71,7 +72,8 @@
       "Human Research Ethics Committee",
       "Research Data Management support",
       "Privacy and information security"
-    ]
+    ],
+    "uploadChecker": true
   },
   {
     "id": "synthetic-data",
@@ -117,7 +119,7 @@
       "permissions"
     ],
     "status": "approval",
-    "answer": "No. Storing research data in OneDrive does not automatically approve it for AI-assisted processing. Copilot use must still align with ethics approval, participant consent, data governance, confidentiality obligations and the project data management plan.",
+    "answer": "No. Storing research data in OneDrive does not automatically mean that Microsoft 365 Copilot or another embedded AI feature is approved to process it. AI-assisted processing must still be consistent with ethics approval, participant consent, data governance, confidentiality and the data management plan.",
     "why": [
       "Storage approval and AI-processing approval are separate decisions."
     ],
@@ -128,7 +130,9 @@
     ],
     "recording": "Record any material AI-assisted processing and how permissions, verification and governance were checked.",
     "sections": [
-      "Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot"
+      "Recommendation 2",
+      "Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot",
+      "Appendix E"
     ],
     "support": [
       "Research Data Management support",
@@ -150,25 +154,28 @@
       "upload"
     ],
     "status": "caution",
-    "answer": "Access to a publication does not automatically permit uploading it to an AI system. Public AI tools should generally not be used for copyrighted PDFs unless the licence, terms or rights holder permit that use. A University-approved tool may still require a licence and terms check.",
+    "answer": "Usually not into a public/consumer or personally subscribed AI tool unless the copyright, licence and platform terms permit AI processing. Access to an article, book or PDF does not automatically give permission to upload it to an AI system. Use the Library upload checker for a quick first check.",
     "why": [
       "Library access rights and AI-upload rights are not necessarily the same."
     ],
     "actions": [
-      "Check the licence, publisher terms and tool terms.",
-      "Prefer bibliographic details, your own notes or a lawful open-access version where appropriate.",
-      "Seek copyright advice if uncertain."
+      "Check the copyright or licence applying to the material.",
+      "Check the AI platform terms for uploaded content.",
+      "Use the Library upload checker for a quick first check.",
+      "Seek copyright advice if the position remains unclear."
     ],
     "recording": "Record material use where the AI output influences analysis, writing or evidence synthesis.",
     "sections": [
       "Recommendation 2",
       "Copyright and intellectual property principle",
-      "Appendix A"
+      "Appendix E"
     ],
     "support": [
       "Library Copyright adviser",
-      "Library research support"
-    ]
+      "Copyright and GenAI guidance",
+      "AI upload checker"
+    ],
+    "uploadChecker": true
   },
   {
     "id": "unpublished-draft",
@@ -183,7 +190,7 @@
       "confidential"
     ],
     "status": "caution",
-    "answer": "Use caution. Avoid uploading unpublished, confidential or commercially sensitive drafts to public AI tools. A University-approved tool is preferred, but you must still consider confidentiality, intellectual property, collaborator agreements, publisher requirements and the tool's data handling.",
+    "answer": "Use caution. Researcher-authored draft text is higher risk when it is unpublished, confidential or commercially sensitive. A University-approved or protected tool is generally preferable, but approval of a tool does not mean every use is permitted.",
     "why": [
       "Unpublished work may contain confidential information, intellectual property or partner-owned material."
     ],
@@ -203,7 +210,8 @@
       "Supervisor or project lead",
       "Library Copyright adviser",
       "Research integrity support"
-    ]
+    ],
+    "uploadChecker": true
   },
   {
     "id": "grammar-editing",
@@ -250,23 +258,22 @@
       "manuscript section",
       "generate text"
     ],
-    "status": "caution",
-    "answer": "AI may assist with structure or preliminary drafting, but it must not replace the researcher's intellectual work, scholarly voice, analysis or judgement. All outputs require substantial critical review, verification and appropriate declaration.",
+    "status": "approval",
+    "answer": "Using AI to produce the initial substantive draft of HDR or Honours research writing where it replaces the researcher’s own intellectual work is usually not permitted without express approval. Using AI as a scaffold for outlines, structure or revision may be possible with caution, supervisor discussion and appropriate declaration.",
     "why": [
       "Presenting AI-generated intellectual content as entirely your own may raise integrity concerns."
     ],
     "actions": [
-      "Use AI as a support tool rather than a writing substitute.",
-      "Check every claim and citation against original sources.",
-      "Rewrite and contextualise the output using your own disciplinary judgement.",
-      "Discuss expectations with your supervisor."
+      "For HDR or Honours work, discuss proposed substantive drafting with your supervisor before proceeding.",
+      "Check candidature, assessment and research requirements.",
+      "Use AI as a scaffold rather than a substitute for your own argument, analysis and scholarly voice.",
+      "Declare material use."
     ],
     "recording": "Keep an AI-use log and declare material drafting or revision assistance in the appropriate location.",
     "sections": [
       "Recommendation 1",
       "Recommendation 3",
-      "Section 12",
-      "Appendix C"
+      "Section 12"
     ],
     "support": [
       "Supervisor",
@@ -318,8 +325,8 @@
       "scoping review",
       "database search"
     ],
-    "status": "caution",
-    "answer": "AI can suggest keywords, spelling variants, related concepts or possible subject headings, but the final database selection, syntax, testing, peer review and documentation must remain human-led.",
+    "status": "acceptable",
+    "answer": "Yes, AI can support search strategy development and preliminary literature discovery by suggesting keywords, synonyms, related concepts, subject headings, search combinations or possible sources. Researchers must verify terms and references independently and use appropriate scholarly databases and established search methods for the final search.",
     "why": [
       "AI-generated strategies may be incomplete, irreproducible or incorrectly translated across databases."
     ],
@@ -333,7 +340,7 @@
     "sections": [
       "Recommendation 6",
       "Section 7",
-      "Appendix C"
+      "Appendix E"
     ],
     "support": [
       "Library research support",
@@ -457,7 +464,7 @@
       "debug"
     ],
     "status": "caution",
-    "answer": "AI may assist with developing, explaining or checking code, but the researcher remains responsible for methodological appropriateness, testing, validation, reproducibility and interpretation. Do not include restricted data in prompts.",
+    "answer": "AI can help explain, format, develop or check code, but code used in research analysis must be independently tested and verified. If AI materially contributes to the analytical method, record the tool/model/version, relevant prompts or settings, validation and verification steps, and disclose material use.",
     "why": [
       "Plausible-looking code can contain methodological, statistical or security errors."
     ],
@@ -469,10 +476,10 @@
     ],
     "recording": "Record tool, version, prompts or prompt summaries, code changes, tests and human verification.",
     "sections": [
+      "Recommendation 1",
+      "Recommendation 4",
       "Section 7: Data analysis",
-      "Section 8",
-      "Appendix B",
-      "Appendix C"
+      "Appendix B"
     ],
     "support": [
       "Supervisor",
@@ -833,15 +840,22 @@
     "title": "Can I enter Indigenous knowledges or culturally restricted material into AI?",
     "category": "Copyright, privacy and confidential material",
     "keywords": [
-      "indigenous",
+      "Aboriginal",
+      "First Nation",
+      "First Nations",
+      "First Nations peoples",
+      "Indigenous",
+      "Torres Strait Islander",
       "aboriginal",
-      "torres strait islander",
+      "cultural governance",
       "cultural knowledge",
-      "restricted",
       "data sovereignty",
       "first nation",
       "first nations",
-      "first nations peoples"
+      "first nations peoples",
+      "indigenous",
+      "restricted",
+      "torres strait islander"
     ],
     "status": "prohibited",
     "answer": "Do not enter Indigenous knowledges, community data, restricted cultural material or unpublished community narratives into AI tools unless explicit ethics, cultural governance, community permission, data sovereignty and University approvals are in place.",
@@ -942,8 +956,8 @@
       "quantitative",
       "recommend"
     ],
-    "status": "caution",
-    "answer": "AI may explain or compare methodological options, but research design decisions must be justified using scholarly methods literature, disciplinary standards and appropriate supervision rather than AI alone.",
+    "status": "acceptable",
+    "answer": "Yes, AI can help you understand or compare research methods and practise workflows with hypothetical or synthetic data. Final methodological decisions must be justified using scholarly and disciplinary sources, and actual research-data analysis requires additional ethics, governance, privacy and validity checks.",
     "why": [
       "AI may provide inaccurate, generic or context-insensitive methods advice."
     ],
@@ -962,6 +976,307 @@
       "Supervisor",
       "Methodologist",
       "Library research support"
+    ]
+  },
+  {
+    "id": "paid-subscription-safety",
+    "title": "Does a paid or private AI subscription make it safe to use research data?",
+    "category": "Copyright, privacy and confidential material",
+    "keywords": [
+      "paid subscription",
+      "private account",
+      "chatgpt plus",
+      "claude pro",
+      "gemini advanced",
+      "data sharing",
+      "training inputs",
+      "consumer ai"
+    ],
+    "status": "approval",
+    "answer": "No. A paid subscription, private account or disabled data-sharing setting does not automatically make an AI tool suitable for research data. You still need to consider privacy, security, storage, processing, contractual and training-on-input arrangements, University approval, ethics, consent and data governance.",
+    "why": [
+      "Subscription status is not the same as institutional approval or research-data approval.",
+      "Different products and features can have different data-handling arrangements."
+    ],
+    "actions": [
+      "Check the actual terms, privacy and data-handling arrangements for the specific product and feature.",
+      "Classify the material before uploading it.",
+      "Prefer a University-approved or protected tool where available and appropriate.",
+      "Check ethics, consent and governance requirements."
+    ],
+    "recording": "Record material AI use and the relevant tool/model/version where it influences the research method or output.",
+    "sections": [
+      "Recommendation 2",
+      "Appendix A",
+      "Appendix E"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Research Data Management support",
+      "Privacy"
+    ],
+    "uploadChecker": true
+  },
+  {
+    "id": "embedded-ai-feature",
+    "title": "Can I use an AI feature built into research software, a database or another platform?",
+    "category": "Data analysis and coding",
+    "keywords": [
+      "embedded AI",
+      "software AI",
+      "database AI",
+      "built in AI",
+      "summarisation",
+      "recommendation",
+      "classification",
+      "transcription",
+      "platform feature"
+    ],
+    "status": "caution",
+    "answer": "Treat embedded AI functionality as AI use. Do not assume the feature is automatically approved simply because the underlying software, database or platform is University-provided or commonly used. Check whether the specific feature, data type and intended use are permitted.",
+    "why": [
+      "Embedded features may process information differently from the rest of the platform.",
+      "University approval may apply only to particular features, data types or use cases."
+    ],
+    "actions": [
+      "Identify what the AI feature does and where information is processed or stored.",
+      "Check whether the feature can be enabled or disabled.",
+      "Confirm whether University approval applies to this feature and intended use.",
+      "Check ethics, consent, data governance and methodological validity where research data are involved."
+    ],
+    "recording": "Record the software, AI feature/model/version, relevant settings, prompts or inputs, outputs used and human verification where the feature materially contributes to research.",
+    "sections": [
+      "Definition: Embedded AI functionality",
+      "Recommendation 2",
+      "Section 8",
+      "Appendix E"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Research Data Management support",
+      "Privacy"
+    ]
+  },
+  {
+    "id": "controlled-environment",
+    "title": "Can I use a self-hosted, local or controlled AI environment with research data?",
+    "category": "Data analysis and coding",
+    "keywords": [
+      "self-hosted",
+      "self hosted",
+      "local AI",
+      "controlled environment",
+      "local model",
+      "secure AI"
+    ],
+    "status": "caution",
+    "answer": "A controlled environment can reduce some external data-disclosure risks, but it does not automatically make the proposed use acceptable. Ethics approval, participant consent, contracts, data governance, copyright, methodological validity, reproducibility and disclosure still need to be considered.",
+    "why": [
+      "Security controls address only some of the risks associated with AI-assisted research.",
+      "Approval of an environment does not establish that an analytical method is valid or that particular data may be processed using AI."
+    ],
+    "actions": [
+      "Confirm approval for the specific environment, data type and purpose.",
+      "Check ethics, consent, governance, contracts and copyright.",
+      "Validate the analytical method and outputs.",
+      "Document the environment, model/version, settings and verification process."
+    ],
+    "recording": "Record the controlled environment, model/version, settings, prompts or input summary, validation, verification and disclosure.",
+    "sections": [
+      "Definition: Self-hosted, local or controlled AI environment",
+      "Recommendation 2",
+      "Recommendation 4",
+      "Appendix E"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Research Data Management support",
+      "Privacy"
+    ]
+  },
+  {
+    "id": "controlled-export-data",
+    "title": "Can I use controlled or export-restricted data with an AI tool?",
+    "category": "Copyright, privacy and confidential material",
+    "keywords": [
+      "controlled data",
+      "export restricted",
+      "export control",
+      "defence",
+      "security restricted",
+      "contractually restricted"
+    ],
+    "status": "approval",
+    "answer": "Do not upload controlled or export-restricted data to an external AI service. Use may only be considered where the relevant legal, security, contractual and University requirements have been checked and explicit approval has been obtained for that data and purpose.",
+    "why": [
+      "Controlled or export-restricted data may be subject to legal, defence, security, contractual or transfer restrictions."
+    ],
+    "actions": [
+      "Stop before uploading the material to an external AI service.",
+      "Identify the legal, security, contractual and University controls that apply.",
+      "Obtain explicit approval for the specific data, tool and purpose."
+    ],
+    "recording": "Keep records of the approval, tool/environment, purpose and any required controls.",
+    "sections": [
+      "Definition: Controlled or export-restricted data",
+      "Recommendation 2",
+      "Appendix E"
+    ],
+    "support": [
+      "Research Office",
+      "DIT",
+      "Privacy"
+    ]
+  },
+  {
+    "id": "validate-ai-analysis",
+    "title": "How should I validate AI-assisted analysis, coding, screening or extraction?",
+    "category": "Data analysis and coding",
+    "keywords": [
+      "validate",
+      "validation",
+      "prompt sensitivity",
+      "repeated runs",
+      "model version",
+      "non deterministic",
+      "self critique",
+      "confidence",
+      "screening",
+      "coding",
+      "extraction"
+    ],
+    "status": "caution",
+    "answer": "Validation should test whether substantive results are stable and sufficiently accurate for the specific research task and context. Consider prompt wording, model/version, settings and repeated runs. An AI tool’s confidence, explanation, self-critique or agreement is not independent validation.",
+    "why": [
+      "AI outputs can change with prompts, settings, model versions and repeated runs.",
+      "Agreement from the same or another AI system does not replace checking against original evidence, established methods and human expertise."
+    ],
+    "actions": [
+      "Define acceptable performance before relying on the output.",
+      "Test alternative prompts or settings where appropriate.",
+      "Repeat tasks and document meaningful variation.",
+      "Check results against original evidence and human expertise.",
+      "Report errors, failure modes, corrections and material limitations."
+    ],
+    "recording": "Record tool/model/version, settings, prompts, repeated-run results, validation criteria, errors or failure modes, human verification and corrections.",
+    "sections": [
+      "Recommendation 4",
+      "Recommendation 6",
+      "Levels of AI tool use",
+      "Appendix E"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Review methodologist",
+      "Statistician or methodologist"
+    ]
+  },
+  {
+    "id": "identify-collaborators",
+    "title": "Can AI help identify possible research collaborators, networks or related research areas?",
+    "category": "Research ideas and methods",
+    "keywords": [
+      "collaborator",
+      "collaborators",
+      "networks",
+      "researchers",
+      "expertise",
+      "affiliations"
+    ],
+    "status": "acceptable",
+    "answer": "Yes, AI can be used to identify possible collaborators, networks or related research areas as an exploratory aid. Names, affiliations, expertise and current roles must be independently verified before you rely on the information.",
+    "why": [
+      "AI systems may return outdated or incorrect biographical and affiliation information."
+    ],
+    "actions": [
+      "Verify names and affiliations using authoritative institutional or scholarly sources.",
+      "Check current roles and expertise directly.",
+      "Do not rely on AI alone to make collaboration decisions."
+    ],
+    "recording": "Record or declare the use if it materially influences project development or partnership decisions.",
+    "sections": [
+      "Section 5",
+      "Recommendation 4",
+      "Section 7"
+    ],
+    "support": [
+      "Library research support",
+      "Supervisor or project lead"
+    ]
+  },
+  {
+    "id": "upload-checker",
+    "title": "How do I check whether I can upload a file or other material to an AI tool?",
+    "category": "Copyright, privacy and confidential material",
+    "keywords": [
+      "upload checker",
+      "can i upload",
+      "file upload",
+      "pdf upload",
+      "copyright platform terms",
+      "terms of service"
+    ],
+    "status": "caution",
+    "answer": "Use the Library’s “Can I upload this to an AI tool?” decision tool for a quick first check on copyright and platform terms. It is only one part of the decision: ethics, privacy, confidentiality, contractual and data-governance requirements may still apply.",
+    "why": [
+      "Permission to access material does not automatically permit AI processing.",
+      "Copyright and platform terms do not resolve participant-data, privacy, confidentiality, contract or governance obligations."
+    ],
+    "actions": [
+      "Use the upload checker before uploading third-party or uncertain material.",
+      "Then check any ethics, privacy, confidentiality, contractual or data-governance requirements that apply.",
+      "Seek advice if the result is unclear or the material is higher risk."
+    ],
+    "recording": "Record material AI use where it influences research methods, analysis, writing or outputs.",
+    "sections": [
+      "Recommendation 2",
+      "Appendix A",
+      "Appendix E"
+    ],
+    "support": [
+      "AI upload checker",
+      "Library Copyright adviser",
+      "Copyright and GenAI guidance"
+    ],
+    "uploadChecker": true
+  },
+  {
+    "id": "tool-suitability",
+    "title": "How do I assess whether an AI tool is suitable for a research task?",
+    "category": "Research ideas and methods",
+    "keywords": [
+      "tool suitability",
+      "assess AI tool",
+      "auditability",
+      "traceability",
+      "uncertainty",
+      "reproducibility",
+      "validation",
+      "data residency",
+      "model version"
+    ],
+    "status": "caution",
+    "answer": "Use the AI Tool Suitability Checklist before adopting a tool that may influence methods, analysis, interpretation, reporting or evidence synthesis. Consider validation, performance, transparency, reproducibility, human expertise, privacy and copyright, traceability to evidence, uncertainty, model/version access, auditability and embedded AI features.",
+    "why": [
+      "A tool can be convenient or institutionally available without being methodologically suitable for a particular research task."
+    ],
+    "actions": [
+      "Check the tool’s intended purpose and evidence base.",
+      "Assess validation and acceptable performance for your context.",
+      "Check traceability, uncertainty, reproducibility and auditability.",
+      "Check privacy, licensing, data handling and embedded AI features.",
+      "Prefer an approved local, enterprise or open alternative where appropriate."
+    ],
+    "recording": "Document the suitability assessment and any mitigations where the tool materially affects the research method.",
+    "sections": [
+      "Appendix E",
+      "Recommendation 4",
+      "Section 13"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Library research support",
+      "Research Office"
     ]
   }
 ]
