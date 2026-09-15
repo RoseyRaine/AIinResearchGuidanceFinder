@@ -56,8 +56,8 @@ const guidelineLinks = {
   'Appendix A': 'guide.html#appendix-a',
   'Appendix B': 'guide.html#appendix-b',
   'Appendix C': 'guide.html#appendix-c',
-  'Appendix E': 'guide.html#appendix-e',
-  'Appendix G': 'guide.html#appendix-g',
+  'Appendix D': 'guide.html#appendix-d',
+  'Appendix F': 'guide.html#appendix-f',
   'Case Study 4': 'guide.html#case-study-4',
   'Case Study 6': 'guide.html#case-study-6'
 };
@@ -487,7 +487,7 @@ function showAnswer(id) {
       ${accordionItem('Guideline basis', guidelineBasisList(question.sections))}
       ${accordionItem('Possible support pathways', supportList(question.support))}
       ${question.uploadChecker ? `<div class="answer-related-tool"><p class="eyebrow">Related tool</p><h3>Need to check whether material can be uploaded?</h3><p>The Library upload checker gives a quick first check on copyright and platform terms. Other ethics, privacy, confidentiality, contractual or data-governance requirements may still apply.</p><a class="button button-secondary" href="https://roseyraine.github.io/ai-upload-check/" target="_blank" rel="noopener noreferrer">Can I upload this to an AI tool?</a></div>` : ''}
-      <button id="printAnswer" class="mode-button" type="button">Print this result</button>
+      <button id="printAnswer" class="button button-secondary print-result-button" type="button">Print this result</button>
     </section>`;
   panel.hidden = false;
   panel.scrollIntoView({ behavior: 'smooth', block: 'start' });

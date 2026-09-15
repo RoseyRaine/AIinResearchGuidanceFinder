@@ -18,7 +18,7 @@ A static, accessible decision-support website designed for GitHub Pages and embe
 
 ## Important status
 
-This resource is based on the 2026 draft *Advice Relating to the Use of Artificial Intelligence in Research*. All wording, support pathways, branding, links and governance statements should be reviewed and formally approved before publication.
+This resource is based on the 2026 draft *Artificial Intelligence in Research: Guidance for Responsible Use*. All wording, support pathways, branding, links and governance statements should be reviewed and formally approved before publication.
 
 ## Test locally
 

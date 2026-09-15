@@ -66,7 +66,7 @@
     "sections": [
       "Recommendation 2",
       "Section 8",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Human Research Ethics Committee",
@@ -132,7 +132,7 @@
     "sections": [
       "Recommendation 2",
       "Section 8: Research data stored in OneDrive and using Microsoft 365 Copilot",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Research Data Management support",
@@ -168,7 +168,7 @@
     "sections": [
       "Recommendation 2",
       "Copyright and intellectual property principle",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Library Copyright adviser",
@@ -340,7 +340,7 @@
     "sections": [
       "Recommendation 6",
       "Section 7",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Library research support",
@@ -375,7 +375,7 @@
       "Recommendation 6",
       "Levels of AI tool use",
       "Appendix B",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Library research support",
@@ -409,7 +409,7 @@
     "sections": [
       "Recommendation 6",
       "Appendix B",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Review methodologist",
@@ -1008,7 +1008,7 @@
     "sections": [
       "Recommendation 2",
       "Appendix A",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Supervisor or project lead",
@@ -1049,7 +1049,7 @@
       "Definition: Embedded AI functionality",
       "Recommendation 2",
       "Section 8",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Supervisor or project lead",
@@ -1086,7 +1086,7 @@
       "Definition: Self-hosted, local or controlled AI environment",
       "Recommendation 2",
       "Recommendation 4",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Supervisor or project lead",
@@ -1120,7 +1120,7 @@
     "sections": [
       "Definition: Controlled or export-restricted data",
       "Recommendation 2",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Research Office",
@@ -1163,7 +1163,7 @@
       "Recommendation 4",
       "Recommendation 6",
       "Levels of AI tool use",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "Supervisor or project lead",
@@ -1231,7 +1231,7 @@
     "sections": [
       "Recommendation 2",
       "Appendix A",
-      "Appendix E"
+      "Appendix D"
     ],
     "support": [
       "AI upload checker",
@@ -1269,7 +1269,7 @@
     ],
     "recording": "Document the suitability assessment and any mitigations where the tool materially affects the research method.",
     "sections": [
-      "Appendix E",
+      "Appendix D",
       "Recommendation 4",
       "Section 13"
     ],

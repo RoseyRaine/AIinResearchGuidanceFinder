@@ -1,3 +1,14 @@
+# Changelog
+
+## 0.5.0 — 2026-09-15
+- Updated the resource to the renamed draft *Artificial Intelligence in Research: Guidance for Responsible Use*.
+- Updated Recommendation 3 wording, Appendix references and the full-guidance navigation to match the latest draft.
+- Removed the former Suggested Process and Workflow Additions appendix and renumbered the remaining appendices D–F.
+- Updated tool-suitability references from Appendix E to Appendix D.
+- Set all Quick Decision Guide accordions to closed on initial page load.
+- Restyled the “Print this result” control as a standard secondary action and hide it in print output.
+- Updated the content version and review date.
+
 ## 0.4.1 — Quick Decision Guide readability
 
 - Changed the Quick Decision Guide accordions to a single-column vertical stack.

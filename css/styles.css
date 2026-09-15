@@ -495,3 +495,20 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
   color: #f8f3ec;
   border-color: var(--charcoal);
 }
+
+/* v0.5.0 result print action */
+.print-result-button{
+  display:inline-flex;
+  width:auto;
+  align-items:center;
+  justify-content:center;
+  margin-top:1.25rem;
+  padding:.72rem 1rem;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  align-self:flex-start;
+}
+@media print{
+  .print-result-button{display:none!important}
+}
