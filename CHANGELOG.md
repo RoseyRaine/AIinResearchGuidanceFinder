@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.5.1 — 15 September 2026
+
+- Added a dedicated **Case studies** page based on Appendix E of the current draft guidance.
+- Added topic filters for research practice, data and ethics, literature and evidence, integrity and inclusion, and images and publishing.
+- Added direct links from each case study to its relevant recommendation or guidance section.
+- Added **Case studies** to the main navigation and full-guidance actions.
+- Updated displayed content version to 0.5.1.
+
 ## 0.5.0 — 2026-09-15
 - Updated the resource to the renamed draft *Artificial Intelligence in Research: Guidance for Responsible Use*.
 - Updated Recommendation 3 wording, Appendix references and the full-guidance navigation to match the latest draft.

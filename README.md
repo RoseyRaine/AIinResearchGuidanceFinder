@@ -121,3 +121,8 @@ The decision tool links contextually to the CSU Library **Can I upload this to a
 https://roseyraine.github.io/ai-upload-check/
 
 The upload checker provides a quick first check on copyright and platform terms; it does not replace ethics, privacy, confidentiality, contractual or data-governance requirements.
+
+
+## Case studies
+
+`case-studies.html` presents the ten examples from Appendix E as filterable, expandable cards with links to the relevant guidance sections.
