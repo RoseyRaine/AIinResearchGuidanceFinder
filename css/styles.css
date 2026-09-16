@@ -519,3 +519,28 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 @media(max-width:700px){.case-hero{padding-top:2rem}.case-card summary{grid-template-columns:auto 1fr}.case-toggle{grid-column:2;grid-row:2}.case-body{grid-template-columns:1fr}.case-reflection,.case-guideline-link{grid-column:1}.case-filter-buttons{display:grid;grid-template-columns:1fr 1fr}.case-filter-button{text-align:center}}
 @media(max-width:430px){.case-filter-buttons{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.case-toggle{transition:none}}
+
+/* v0.6.0 additional guidance shortcuts, recommendations and declaration examples */
+.guidance-shortcuts{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;margin:-4px 0 20px}
+.guidance-shortcuts-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:#6b625b;margin-right:.2rem}
+.guidance-shortcut{display:inline-flex;align-items:center;padding:.58rem .86rem;border-radius:999px;border:1px solid var(--line);background:#f7f0e7;color:var(--charcoal);font-weight:700;text-decoration:none}
+.guidance-shortcut:hover,.guidance-shortcut:focus-visible{border-color:var(--orange)}
+.guidance-shortcut.is-active,.guidance-shortcut.is-active:visited{background:var(--charcoal);border-color:var(--charcoal);color:#f8f3ec}
+.recommendation-list{display:grid;gap:.85rem;margin:1.2rem 0 2.5rem}
+.recommendation-card{border:1px solid var(--line);border-radius:22px;background:#fbf7f1;overflow:hidden}
+.recommendation-card summary{list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1.15rem 1.25rem;cursor:pointer}
+.recommendation-card summary::-webkit-details-marker{display:none}
+.recommendation-card summary:hover{background:#f3eadf}
+.recommendation-card[open] .case-toggle{transform:rotate(45deg)}
+.recommendation-body{padding:1rem 1.25rem 1.3rem;border-top:1px solid var(--line)}
+.recommendation-body>p{font-size:1.03rem;line-height:1.55;max-width:72ch}
+.recommendation-links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.8rem}
+.recommendation-links a{font-weight:700;color:var(--orange-dark);text-underline-offset:3px}
+.declaration-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.2rem 0 2.5rem}
+.declaration-card{border:1px solid var(--line);border-radius:22px;background:#fbf7f1;padding:1.25rem;display:flex;flex-direction:column;align-items:flex-start}
+.declaration-card h2{font-size:1.5rem;margin:0 0 .7rem}
+.declaration-card p{line-height:1.58;white-space:pre-line}
+.copy-declaration{font:inherit;font-weight:700;border:1px solid var(--charcoal);background:transparent;color:var(--charcoal);border-radius:999px;padding:.68rem .95rem;cursor:pointer;margin-top:auto}
+.copy-declaration:hover,.copy-declaration:focus-visible{background:var(--charcoal);color:#f8f3ec}
+@media(max-width:760px){.declaration-grid{grid-template-columns:1fr}.guidance-shortcuts{margin-top:0}}
+@media print{.guidance-shortcuts,.copy-declaration{display:none!important}}

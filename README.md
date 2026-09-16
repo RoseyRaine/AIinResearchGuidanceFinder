@@ -126,3 +126,9 @@ The upload checker provides a quick first check on copyright and platform terms;
 ## Case studies
 
 `case-studies.html` presents the ten examples from Appendix E as filterable, expandable cards with links to the relevant guidance sections.
+
+
+## Additional pages in v0.6.0
+- `recommendations.html` — concise interactive overview of the nine recommendations.
+- `declarations.html` — adaptable declaration/acknowledgement wording from Appendix C with copy buttons.
+- `case-studies.html` — now includes all 14 case studies from Appendix E.

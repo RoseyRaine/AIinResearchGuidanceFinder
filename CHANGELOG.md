@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0 — 16 September 2026
+- Updated the tool to the 45-page draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
+- Added the new guidance on simulated critical conversations in the research lifecycle.
+- Added Case Studies 11–14: critical research-design coach; simulated audience for survey/interview questions; presentation/interview rehearsal; and brainstorming-to-publication disclosure.
+- Updated lifecycle guidance for data collection and AI-generated slides/presentations.
+- Updated Training and Support Pathway wording.
+- Added four new searchable questions matching the new case studies.
+- Added a dedicated Recommendations page.
+- Added a dedicated Declaration examples page with adaptable wording from Appendix C and copy buttons.
+- Added compact “More guidance” buttons for Recommendations and Declaration examples without crowding the primary navigation.
+
 ## v0.5.1 — 15 September 2026
 
 - Added a dedicated **Case studies** page based on Appendix E of the current draft guidance.

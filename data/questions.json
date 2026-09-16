@@ -1278,5 +1278,154 @@
       "Library research support",
       "Research Office"
     ]
+  },
+  {
+    "id": "critical-research-design-coach",
+    "title": "Can I use AI as a critical coach to challenge my research design?",
+    "category": "Research ideas and methods",
+    "keywords": [
+      "critical coach",
+      "research design",
+      "devil's advocate",
+      "methodology",
+      "methods reviewer",
+      "confounding",
+      "feasibility",
+      "critical conversation"
+    ],
+    "status": "caution",
+    "answer": "Yes, as a thinking aid. AI can act as a mock reviewer or critical conversation partner to surface possible weaknesses, assumptions, confounding factors or questions you may not have considered. It should not determine the study design or replace methodological expertise, supervision, statistical advice, disciplinary standards or scholarly evidence.",
+    "why": [
+      "AI-generated critiques may be incomplete, incorrect or shaped by model assumptions.",
+      "Methodological decisions remain the researcher's responsibility and must be justified using appropriate evidence and expertise."
+    ],
+    "actions": [
+      "Use AI suggestions as prompts for further investigation, not methodological advice.",
+      "Check important suggestions against methodological literature and disciplinary guidance.",
+      "Discuss material design issues with your supervisor, project lead or relevant expert."
+    ],
+    "recording": "If AI materially influences the research design, record the use and disclose it where appropriate.",
+    "sections": [
+      "Recommendation 1",
+      "Recommendation 4",
+      "Section 7",
+      "Appendix B"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Library research support"
+    ]
+  },
+  {
+    "id": "simulate-target-population",
+    "title": "Can I use AI to test survey or interview questions as if it were the target population?",
+    "category": "Research ideas and methods",
+    "keywords": [
+      "target population",
+      "survey questions",
+      "interview questions",
+      "simulate participant",
+      "hypothetical participant",
+      "question testing",
+      "pilot",
+      "readability",
+      "leading questions"
+    ],
+    "status": "caution",
+    "answer": "You can use AI for preliminary question testing, such as identifying jargon, ambiguity, repetition or potentially leading wording. However, AI-generated responses are synthetic and cannot substitute for the target population, appropriate participant involvement, piloting, consultation or validation.",
+    "why": [
+      "An AI model cannot demonstrate how real participants will understand, interpret or respond to a question.",
+      "Language, lived experience and cultural context may not be represented accurately by the model."
+    ],
+    "actions": [
+      "Use AI only as an early readability or clarity check.",
+      "Follow with appropriate expert review, piloting or involvement of people representative of the intended population.",
+      "Do not report simulated AI responses as participant data or evidence of instrument validity."
+    ],
+    "recording": "Record material AI use if it meaningfully changes the instrument or research design.",
+    "sections": [
+      "Section 7",
+      "Recommendation 4",
+      "Appendix B"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Human Research Ethics Committee"
+    ]
+  },
+  {
+    "id": "practice-presentation-interview",
+    "title": "Can I use AI as a critical audience to practise a presentation or interview?",
+    "category": "Writing, editing and translation",
+    "keywords": [
+      "practice presentation",
+      "presentation rehearsal",
+      "interview practice",
+      "critical audience",
+      "viva",
+      "confirmation panel",
+      "job interview",
+      "media interview",
+      "mock questions"
+    ],
+    "status": "acceptable",
+    "answer": "Yes, where you provide only non-confidential material. AI can generate challenging questions or act as a mock audience to help you practise explaining your rationale, methods, limitations and findings.",
+    "why": [
+      "Rehearsal can support communication skills and critical reflection without replacing your own knowledge or judgement.",
+      "AI-generated questions may still contain assumptions or gaps and are not a reliable prediction of what a real audience will ask."
+    ],
+    "actions": [
+      "Use a non-confidential summary rather than unpublished or restricted material in public AI tools.",
+      "Check the questions critically and use them as practice prompts only.",
+      "Do not upload confidential manuscripts, participant information, examination material or restricted content into public AI tools."
+    ],
+    "recording": "Routine rehearsal may not require detailed recording unless it materially shapes the research output or is subject to specific disclosure requirements.",
+    "sections": [
+      "Section 7",
+      "Recommendation 1",
+      "Recommendation 4"
+    ],
+    "support": [
+      "Supervisor or project lead"
+    ]
+  },
+  {
+    "id": "brainstorming-to-publication",
+    "title": "If AI influenced my research question early on, do I need to think about it again when I publish?",
+    "category": "Grants, publishing and peer review",
+    "keywords": [
+      "brainstorming publication",
+      "early AI use",
+      "research question",
+      "conception",
+      "design",
+      "material use",
+      "disclosure",
+      "publication",
+      "acknowledge"
+    ],
+    "status": "caution",
+    "answer": "Yes. Whether AI-generated wording appears in the final publication is not the only consideration. AI use may still be material if it meaningfully shaped the research question, design, method, analysis or interpretation.",
+    "why": [
+      "Material AI influence can occur early in the research lifecycle and remain relevant at publication.",
+      "Publisher, funder or institutional disclosure requirements may apply even when no AI-generated wording is copied into the final output."
+    ],
+    "actions": [
+      "Review your AI-use records and discuss relevant use with co-authors.",
+      "Check the target journal, publisher or funder requirements before submission.",
+      "Include an appropriate disclosure where required."
+    ],
+    "recording": "Record significant AI use when it occurs rather than trying to reconstruct it later at publication.",
+    "sections": [
+      "Recommendation 3",
+      "Section 11",
+      "Appendix B",
+      "Appendix C"
+    ],
+    "support": [
+      "Library publishing support",
+      "Research Integrity Unit",
+      "Supervisor or project lead"
+    ]
   }
 ]

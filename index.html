@@ -1,97 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A guided decision tool based on Charles Sturt University Artificial Intelligence in Research: Guidance for Responsible Use.">
-  <title>AI in Research Decision Tool</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="A guided decision tool based on Charles Sturt University Artificial Intelligence in Research: Guidance for Responsible Use." name="description"/>
+<title>AI in Research Decision Tool</title>
+<link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
-    <div class="shell header-grid">
-      <div class="brand-block" aria-label="Charles Sturt University">
-        <img class="brand-logo" src="assets/csu-logo.png" alt="Charles Sturt University">
-        <div class="brand-name">Charles Sturt<br>University</div>
-      </div>
-    </div>
-  </header>
-
-  <main id="main-content" class="shell">
-    <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Responsible research practice</p>
-      <h1 id="page-title" class="interactive-title" tabindex="0" role="button" aria-label="AI in Research Decision Tool. Select to explore the tool options.">AI in Research Decision Tool</h1>
-      <div class="lifecycle-cue" id="lifecycleCue" tabindex="0" role="button" aria-label="Explore the tool options">
-        <span class="lifecycle-prefix">Explore:</span>
-        <span id="lifecyclePhrase" class="lifecycle-phrase">Develop a question</span>
-        <span class="lifecycle-arrow">→</span>
-      </div>
-      <p class="visually-hidden" id="titleInteractionHelp">Move across the title to explore stages of the research lifecycle. Select the title or the lifecycle prompt to move to the tool options.</p>
-      <p class="hero-copy">Work through a short pathway or explore a common question to find the guidance, checks and support relevant to your proposed use of AI.</p>
-    </section>
-
-    <section class="privacy-note" aria-labelledby="privacy-title">
-      <div class="privacy-icon" aria-hidden="true">!</div>
-      <div class="privacy-copy">
-        <h2 id="privacy-title">Keep your question general</h2>
-        <p>Do not enter participant information, confidential data, unpublished material or culturally restricted information into this tool.</p>
-        <a class="privacy-tool-link" href="https://roseyraine.github.io/ai-upload-check/" target="_blank" rel="noopener noreferrer">Not sure whether you can upload material? Use the AI upload checker →</a>
-      </div>
-    </section>
-
-    <nav id="tool-options" class="mode-switch" aria-label="Choose how to use the tool">
-      <button class="mode-button is-active has-tooltip" id="tab-guide" type="button" aria-controls="guide-panel" aria-selected="true" data-tooltip="Step through a research task to identify where AI may be used and which checks apply.">Guide me</button>
-      <a class="mode-button mode-link has-tooltip" href="quick-guide.html" data-tooltip="See the four quick decision categories, examples and conditions at a glance.">Quick decision guide</a>
-      <button class="mode-button has-tooltip" id="tab-search" type="button" aria-controls="search-panel" aria-selected="false" data-tooltip="Search curated questions and controlled answers without entering sensitive details.">Search questions</button>
-      <button class="mode-button has-tooltip" id="tab-browse" type="button" aria-controls="browse-panel" aria-selected="false" data-tooltip="Browse questions grouped by research activity.">Browse topics</button>
-      <a class="mode-button mode-link has-tooltip" href="case-studies.html" data-tooltip="See practical examples of responsible AI use in common research situations.">Case studies</a>
-      <a class="mode-button mode-link has-tooltip" href="guide.html" data-tooltip="Read the complete updated 2026 draft AI in research guidance.">View full guidance</a>
-    </nav>
-
-    <section id="guide-panel" class="experience-card" aria-labelledby="tab-guide">
-      <div class="card-topline">
-        <div>
-          <p class="eyebrow">Guided pathway</p>
-          <h2>Can I use AI for this research task?</h2>
-        </div>
-        <button id="restartGuide" class="text-button" type="button">Start again</button>
-      </div>
-      <div id="progress" class="progress" aria-live="polite"></div>
-      <div id="guideContent" class="stage" aria-live="polite"></div>
-    </section>
-
-    <section id="search-panel" class="experience-card" aria-labelledby="tab-search" hidden>
-      <div class="card-topline"><div><p class="eyebrow">Controlled answers</p><h2>Search common questions</h2></div></div>
-      <label class="field-label" for="searchInput">Describe the task without sensitive details</label>
-      <div class="search-composer">
-        <input id="searchInput" type="search" autocomplete="off" placeholder="For example: interview transcripts in Copilot">
-        <button id="clearSearch" class="clear-button" type="button">Clear</button>
-      </div>
-      <p id="searchSummary" class="supporting-text" aria-live="polite"></p>
-      <div id="searchResults" class="results-grid"></div>
-    </section>
-
-    <section id="browse-panel" class="experience-card" aria-labelledby="tab-browse" hidden>
-      <div class="card-topline"><div><p class="eyebrow">Browse guidance</p><h2>Choose a research activity</h2></div></div>
-      <div id="categoryGrid" class="visual-grid"></div>
-      <div id="categoryResults" class="results-grid"></div>
-    </section>
-
-    <section id="answerPanel" class="result-layout" hidden aria-live="polite"></section>
-
-    <section class="support-band" aria-labelledby="support-title">
-      <div><p class="eyebrow">Need a person?</p><h2 id="support-title">Pause and seek advice when the risk is unclear.</h2></div>
-      <p>Possible pathways include your supervisor or project lead, Human Research Ethics Committee, Research Data Management support, Privacy and Information Security, the Library Copyright Adviser, Research Integrity, the Research Office or Library research and publishing support.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-grid footer-expanded">
-      <div><strong>AI in Research Decision Tool</strong><p>Based on the draft <em>Artificial Intelligence in Research: Guidance for Responsible Use</em>. <a href="guide.html">View the full guidance</a>.</p><p>This interactive resource was developed with assistance from ChatGPT (GPT-5.6 Sol) and reviewed and edited by Charles Sturt University staff.</p></div>
-      <div class="licence-block"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer"><img src="assets/cc-by.png" alt="Creative Commons Attribution 4.0 International"></a><p>Except for the Charles Sturt University name, logo and other branded elements, and any third-party material, this resource is licensed under a Creative Commons Attribution 4.0 International Licence.</p><p><strong>Content version:</strong> 0.5.1<br><strong>Last reviewed:</strong> 15 September 2026</p></div>
-    </div>
-  </footer>
-  <script src="js/app.js" defer></script>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="shell header-grid">
+<div aria-label="Charles Sturt University" class="brand-block">
+<img alt="Charles Sturt University" class="brand-logo" src="assets/csu-logo.png"/>
+<div class="brand-name">Charles Sturt<br/>University</div>
+</div>
+</div>
+</header>
+<main class="shell" id="main-content">
+<section aria-labelledby="page-title" class="hero">
+<p class="eyebrow">Responsible research practice</p>
+<h1 aria-label="AI in Research Decision Tool. Select to explore the tool options." class="interactive-title" id="page-title" role="button" tabindex="0">AI in Research Decision Tool</h1>
+<div aria-label="Explore the tool options" class="lifecycle-cue" id="lifecycleCue" role="button" tabindex="0">
+<span class="lifecycle-prefix">Explore:</span>
+<span class="lifecycle-phrase" id="lifecyclePhrase">Develop a question</span>
+<span class="lifecycle-arrow">→</span>
+</div>
+<p class="visually-hidden" id="titleInteractionHelp">Move across the title to explore stages of the research lifecycle. Select the title or the lifecycle prompt to move to the tool options.</p>
+<p class="hero-copy">Work through a short pathway or explore a common question to find the guidance, checks and support relevant to your proposed use of AI.</p>
+</section>
+<section aria-labelledby="privacy-title" class="privacy-note">
+<div aria-hidden="true" class="privacy-icon">!</div>
+<div class="privacy-copy">
+<h2 id="privacy-title">Keep your question general</h2>
+<p>Do not enter participant information, confidential data, unpublished material or culturally restricted information into this tool.</p>
+<a class="privacy-tool-link" href="https://roseyraine.github.io/ai-upload-check/" rel="noopener noreferrer" target="_blank">Not sure whether you can upload material? Use the AI upload checker →</a>
+</div>
+</section>
+<nav aria-label="Choose how to use the tool" class="mode-switch" id="tool-options">
+<button aria-controls="guide-panel" aria-selected="true" class="mode-button is-active has-tooltip" data-tooltip="Step through a research task to identify where AI may be used and which checks apply." id="tab-guide" type="button">Guide me</button>
+<a class="mode-button mode-link has-tooltip" data-tooltip="See the four quick decision categories, examples and conditions at a glance." href="quick-guide.html">Quick decision guide</a>
+<button aria-controls="search-panel" aria-selected="false" class="mode-button has-tooltip" data-tooltip="Search curated questions and controlled answers without entering sensitive details." id="tab-search" type="button">Search questions</button>
+<button aria-controls="browse-panel" aria-selected="false" class="mode-button has-tooltip" data-tooltip="Browse questions grouped by research activity." id="tab-browse" type="button">Browse topics</button>
+<a class="mode-button mode-link has-tooltip" data-tooltip="See practical examples of responsible AI use in common research situations." href="case-studies.html">Case studies</a>
+<a class="mode-button mode-link has-tooltip" data-tooltip="Read the complete updated 2026 draft AI in research guidance." href="guide.html">View full guidance</a>
+</nav><div aria-label="Additional guidance" class="guidance-shortcuts"><span class="guidance-shortcuts-label">More guidance</span><a class="guidance-shortcut" href="recommendations.html">Recommendations</a><a class="guidance-shortcut" href="declarations.html">Declaration examples</a></div>
+<section aria-labelledby="tab-guide" class="experience-card" id="guide-panel">
+<div class="card-topline">
+<div>
+<p class="eyebrow">Guided pathway</p>
+<h2>Can I use AI for this research task?</h2>
+</div>
+<button class="text-button" id="restartGuide" type="button">Start again</button>
+</div>
+<div aria-live="polite" class="progress" id="progress"></div>
+<div aria-live="polite" class="stage" id="guideContent"></div>
+</section>
+<section aria-labelledby="tab-search" class="experience-card" hidden="" id="search-panel">
+<div class="card-topline"><div><p class="eyebrow">Controlled answers</p><h2>Search common questions</h2></div></div>
+<label class="field-label" for="searchInput">Describe the task without sensitive details</label>
+<div class="search-composer">
+<input autocomplete="off" id="searchInput" placeholder="For example: interview transcripts in Copilot" type="search"/>
+<button class="clear-button" id="clearSearch" type="button">Clear</button>
+</div>
+<p aria-live="polite" class="supporting-text" id="searchSummary"></p>
+<div class="results-grid" id="searchResults"></div>
+</section>
+<section aria-labelledby="tab-browse" class="experience-card" hidden="" id="browse-panel">
+<div class="card-topline"><div><p class="eyebrow">Browse guidance</p><h2>Choose a research activity</h2></div></div>
+<div class="visual-grid" id="categoryGrid"></div>
+<div class="results-grid" id="categoryResults"></div>
+</section>
+<section aria-live="polite" class="result-layout" hidden="" id="answerPanel"></section>
+<section aria-labelledby="support-title" class="support-band">
+<div><p class="eyebrow">Need a person?</p><h2 id="support-title">Pause and seek advice when the risk is unclear.</h2></div>
+<p>Possible pathways include your supervisor or project lead, Human Research Ethics Committee, Research Data Management support, Privacy and Information Security, the Library Copyright Adviser, Research Integrity, the Research Office or Library research and publishing support.</p>
+</section>
+</main>
+<footer class="site-footer">
+<div class="shell footer-grid footer-expanded">
+<div><strong>AI in Research Decision Tool</strong><p>Based on the draft <em>Artificial Intelligence in Research: Guidance for Responsible Use</em>. <a href="guide.html">View the full guidance</a>.</p><p>This interactive resource was developed with assistance from ChatGPT (GPT-5.6 Sol) and reviewed and edited by Charles Sturt University staff.</p></div>
+<div class="licence-block"><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer" target="_blank"><img alt="Creative Commons Attribution 4.0 International" src="assets/cc-by.png"/></a><p>Except for the Charles Sturt University name, logo and other branded elements, and any third-party material, this resource is licensed under a Creative Commons Attribution 4.0 International Licence.</p><p><strong>Content version:</strong> 0.6.0<br/><strong>Last reviewed:</strong> 16 September 2026</p></div>
+</div>
+</footer>
+<script defer="" src="js/app.js"></script>
 </body>
 </html>
