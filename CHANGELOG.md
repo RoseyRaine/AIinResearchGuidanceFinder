@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1 — 16 September 2026
+- Aligned the primary and “More guidance” navigation rows across all pages.
+- Removed the negative margin that could make the secondary buttons sit unevenly after navigation.
+- Put the “More guidance” label on its own line and matched shortcut button height/padding to the main navigation.
+
 ## 0.6.0 — 16 September 2026
 - Updated the tool to the 45-page draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
 - Added the new guidance on simulated critical conversations in the research lifecycle.
