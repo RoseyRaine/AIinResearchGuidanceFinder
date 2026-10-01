@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.3 — 1 October 2026
+- Fixed the main navigation alignment on the Recommendations and Declaration examples pages.
+- Restored the shared centred shell margins that were being overridden by an older `.quick-nav` margin rule.
+
 ## 0.6.2 — 1 October 2026
 - Moved **Case studies** from the primary navigation into **More guidance**.
 - Aligned primary and secondary navigation consistently on standalone pages.

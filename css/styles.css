@@ -563,3 +563,8 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 .compact-guidance-table th{background:var(--green);color:#f8f3ec}
 .compact-guidance-table tbody tr:nth-child(even){background:#f3eadf}
 @media(max-width:760px){.page-actions .button{width:100%;justify-content:center}.recommendation-card summary{grid-template-columns:auto 1fr auto;gap:.65rem}.compact-guidance-table{margin-inline:0}}
+
+/* v0.6.3: keep standalone-page navigation aligned with the shared shell */
+.quick-nav.shell {
+  margin: 18px auto;
+}
