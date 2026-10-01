@@ -544,3 +544,22 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 .copy-declaration:hover,.copy-declaration:focus-visible{background:var(--charcoal);color:#f8f3ec}
 @media(max-width:760px){.declaration-grid{grid-template-columns:1fr}}
 @media print{.guidance-shortcuts,.copy-declaration{display:none!important}}
+
+
+/* v0.6.2 navigation alignment and full recommendation content */
+.quick-nav.shell{margin-top:18px;margin-bottom:18px}
+.guidance-shortcuts.shell{margin-left:auto;margin-right:auto}
+.page-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
+.full-recommendation{line-height:1.6}
+.full-recommendation p{max-width:none}
+.full-recommendation h3{font-size:1.2rem;margin:1.35rem 0 .55rem}
+.full-recommendation ul{padding-left:1.3rem}
+.full-recommendation li{margin:.45rem 0}
+.recommendation-callout{margin:1.2rem 0;padding:1rem 1.1rem;border-left:4px solid var(--orange);background:#f3eadf;border-radius:0 14px 14px 0}
+.recommendation-callout p{margin:.55rem 0}
+.compact-guidance-table{width:100%;overflow-x:auto;margin:1.2rem 0}
+.compact-guidance-table table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:720px}
+.compact-guidance-table th,.compact-guidance-table td{border:1px solid var(--line);padding:.7rem;vertical-align:top;text-align:left}
+.compact-guidance-table th{background:var(--green);color:#f8f3ec}
+.compact-guidance-table tbody tr:nth-child(even){background:#f3eadf}
+@media(max-width:760px){.page-actions .button{width:100%;justify-content:center}.recommendation-card summary{grid-template-columns:auto 1fr auto;gap:.65rem}.compact-guidance-table{margin-inline:0}}

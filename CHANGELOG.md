@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.2 — 1 October 2026
+- Moved **Case studies** from the primary navigation into **More guidance**.
+- Aligned primary and secondary navigation consistently on standalone pages.
+- Added a **Back to decision tool** button to Recommendations and Declaration examples.
+- Expanded all nine recommendation accordions to contain the full recommendation wording, including key tables, so users no longer need to open the full guidance to read a recommendation.
+
 ## 0.6.1 — 16 September 2026
 - Aligned the primary and “More guidance” navigation rows across all pages.
 - Removed the negative margin that could make the secondary buttons sit unevenly after navigation.
