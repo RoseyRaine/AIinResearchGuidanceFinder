@@ -293,11 +293,13 @@
     "participant-approval": {
       "status": "approval",
       "title": "Approval is required before proceeding",
-      "text": "Participant data must not be uploaded into a public AI tool. Use of an approved tool may only be considered where ethics, consent, governance, confidentiality and the data management plan permit it.",
+      "text": "AI processing of participant data may only proceed where the specific data, task and tool are permitted by ethics approval, participant consent, data governance requirements and the data management plan. A protected or locally hosted environment reduces some risks but does not remove these obligations.",
       "actions": [
-        "Check the approved ethics application and participant information.",
-        "Confirm the tool is approved for the data.",
-        "Seek ethics advice or an amendment if needed."
+        "Check ethics approval and participant consent for the specific AI processing.",
+        "Check whether the provider can retain, reuse or train on inputs or outputs and whether these uses are permitted.",
+        "Assess re-identification risk, including contextual and linked-data risks.",
+        "Use an appropriate University-approved, protected or locally hosted/controlled environment only where the use is authorised.",
+        "Seek ethics, privacy/information security or RDM advice if uncertain."
       ]
     },
     "editing-low": {
@@ -355,7 +357,7 @@
     "public-restricted": {
       "status": "prohibited",
       "title": "Do not enter restricted material into a public/consumer tool",
-      "text": "Public/consumer and personally subscribed AI tools should not receive participant, identifiable, confidential, unpublished, partner-owned, controlled/export-restricted or culturally restricted material unless the relevant permissions and safeguards explicitly permit the use. Third-party copyrighted material also requires appropriate licence or terms.",
+      "text": "Do not enter confidential, participant, restricted, commercial-in-confidence, ICIP, Indigenous Data or culturally restricted material into a public/consumer AI tool unless the relevant permissions and safeguards explicitly allow it.",
       "actions": [
         "Stop before uploading.",
         "Classify the material.",
@@ -377,8 +379,9 @@
       "title": "Pause and seek advice",
       "text": "The risk cannot be determined safely from the information available. Treat the material as higher risk until its classification, permissions and tool protections are confirmed.",
       "actions": [
-        "Do not upload the material yet.",
-        "Consult the relevant support service or project lead."
+        "Identify the relevant risk: ethics, privacy, copyright, data governance, ICIP/cultural authority, information security, contract or research integrity.",
+        "Check whether the tool can retain, reuse or train on inputs or outputs.",
+        "Seek the relevant University, supervisor, community or governance advice before proceeding."
       ]
     },
     "image-scientific": {

@@ -12,16 +12,17 @@
       "copilot"
     ],
     "status": "approval",
-    "answer": "Do not upload interview transcripts, recordings, survey responses or other human research data into a public/consumer AI tool. AI-assisted processing may only be considered where ethics approval, participant consent, data governance requirements, the data management plan and the tool conditions permit the use; where approved, use an appropriate University-approved or protected tool.",
+    "answer": "Do not upload interview transcripts, recordings, survey responses or other human research data into a public/consumer AI tool. AI-assisted processing may only be considered where ethics approval, participant consent, the data management plan, data governance requirements and tool conditions permit it. Where permitted, use an appropriate University-approved, protected or locally hosted/controlled environment.",
     "why": [
-      "Participant data may remain identifiable or re-identifiable even after direct identifiers are removed.",
-      "AI processing may alter the approved data flow, storage, access or research method."
+      "Participant data may remain identifiable or become re-identifiable through context, linkage or combinations of variables even after direct identifiers are removed.",
+      "Consent to participate or store data does not automatically permit supply to an AI system, model training, product improvement or other downstream reuse.",
+      "AI providers may retain, review, reuse or process inputs and outputs beyond the immediate task depending on contracts, settings and terms."
     ],
     "actions": [
       "Check the ethics approval, participant information and consent materials.",
-      "Confirm that the proposed AI use and the specific tool or feature are permitted.",
-      "Check data governance and the data management plan.",
-      "Seek ethics advice or an amendment if the proposed use was not covered."
+      "Establish whether the provider can retain, reuse or train on inputs or outputs and whether these uses can be disabled or contractually excluded.",
+      "Confirm that the specific data, task and tool are permitted under data governance and the data management plan.",
+      "Seek ethics, privacy/information security or RDM advice if the proposed use was not clearly covered."
     ],
     "recording": "Record the tool, version, purpose, input type, prompts or prompt summary, outputs used and human verification steps in the project AI-use log.",
     "sections": [
@@ -51,7 +52,7 @@
       "dataset"
     ],
     "status": "caution",
-    "answer": "Possibly, but de-identification does not automatically make AI use safe. Rich qualitative or linked data may remain re-identifiable. Use must be consistent with ethics approval, participant consent, data governance, the data management plan and the conditions of the specific AI tool or feature.",
+    "answer": "Use caution. De-identification does not automatically make research data safe to upload or process with AI. Re-identification may remain possible through context, linkage or combinations of variables, and downstream AI use or model training may create additional privacy and ethics risks.",
     "why": [
       "Removing direct identifiers may not remove contextual or linkage-based re-identification risk.",
       "The proposed AI use may not have been included in the approved research method."
@@ -837,7 +838,7 @@
   },
   {
     "id": "indigenous-knowledge",
-    "title": "Can I enter Indigenous knowledges or culturally restricted material into AI?",
+    "title": "Can I use Indigenous knowledges, ICIP or Indigenous Data with an AI tool?",
     "category": "Copyright, privacy and confidential material",
     "keywords": [
       "Aboriginal",
@@ -855,22 +856,37 @@
       "first nations peoples",
       "indigenous",
       "restricted",
-      "torres strait islander"
+      "torres strait islander",
+      "ICIP",
+      "Indigenous Cultural and Intellectual Property",
+      "Indigenous Data",
+      "Indigenous Data Sovereignty",
+      "IDS",
+      "FPIC",
+      "Free Prior and Informed Consent",
+      "cultural authority"
     ],
     "status": "prohibited",
-    "answer": "Do not enter Indigenous knowledges, community data, restricted cultural material or unpublished community narratives into AI tools unless explicit ethics, cultural governance, community permission, data sovereignty and University approvals are in place.",
+    "answer": "Usually not without express approval and appropriate Indigenous governance. Do not assume that material is suitable for AI use simply because it is publicly accessible, published, held by the University or legally available. Cultural permission is distinct from legal access.",
     "why": [
-      "Public AI tools may expose, appropriate, decontextualise or misrepresent culturally sensitive knowledge."
+      "ICIP may be communally held, connected to Country and subject to cultural authority, protocols and restrictions on access, interpretation, reproduction or sharing.",
+      "AI systems may retain, reuse, train on, transform or decontextualise material and may obscure provenance or cultural authority.",
+      "Indigenous Data Sovereignty requires Indigenous peoples to retain appropriate authority over the creation, access, analysis, interpretation, management, dissemination and reuse of Indigenous Data."
     ],
     "actions": [
-      "Consult community partners and relevant Indigenous research governance processes.",
-      "Confirm ethics and cultural permissions.",
-      "Check outputs for authority, accuracy, cultural safety and representation."
+      "Establish who has cultural authority over the knowledge or data.",
+      "Confirm whether Free, Prior and Informed Consent is required for the specific AI use and whether consent needs to be ongoing.",
+      "Check ethics approval, ICIP protocols, Indigenous Data Sovereignty arrangements, data management and tool conditions.",
+      "Consider whether AI use is necessary, appropriate and of benefit, including whether the provider can retain, reuse or train on the material.",
+      "Consult relevant community representatives, Indigenous research governance processes, your supervisor and ethics contacts before proceeding."
     ],
     "recording": "Follow the project's approved cultural governance and records requirements.",
     "sections": [
+      "Recommendation 5",
       "Section 9",
-      "Core Principles: Equity, inclusion and cultural safety"
+      "Appendix A",
+      "Appendix D",
+      "Appendix E"
     ],
     "support": [
       "Indigenous research governance contacts",
@@ -1256,16 +1272,17 @@
       "model version"
     ],
     "status": "caution",
-    "answer": "Use the AI Tool Suitability Checklist before adopting a tool that may influence methods, analysis, interpretation, reporting or evidence synthesis. Consider validation, performance, transparency, reproducibility, human expertise, privacy and copyright, traceability to evidence, uncertainty, model/version access, auditability and embedded AI features.",
+    "answer": "Assess the tool across purpose and suitability, methods and transparency, versioning and auditability, privacy and legal requirements, embedded AI features, research-data/model-training arrangements, bias and representation, ICIP and Indigenous Data, and whether a lower-risk alternative would be more appropriate.",
     "why": [
       "A tool can be convenient or institutionally available without being methodologically suitable for a particular research task."
     ],
     "actions": [
-      "Check the tool’s intended purpose and evidence base.",
-      "Assess validation and acceptable performance for your context.",
-      "Check traceability, uncertainty, reproducibility and auditability.",
-      "Check privacy, licensing, data handling and embedded AI features.",
-      "Prefer an approved local, enterprise or open alternative where appropriate."
+      "Define the task and criteria for acceptable performance before relying on outputs.",
+      "Check whether methods and sources can be traced and independently verified.",
+      "Check privacy, storage, third-party access, retention, product improvement and model-training arrangements.",
+      "Assess documented performance differences, source coverage, bias and potential misrepresentation.",
+      "If ICIP or Indigenous Data could be involved, check cultural authority, FPIC, governance and future-use requirements.",
+      "Document mitigations, validation, human oversight and recordkeeping where use proceeds."
     ],
     "recording": "Document the suitability assessment and any mitigations where the tool materially affects the research method.",
     "sections": [
@@ -1426,6 +1443,89 @@
       "Library publishing support",
       "Research Integrity Unit",
       "Supervisor or project lead"
+    ]
+  },
+  {
+    "id": "model-training-reuse",
+    "title": "Can an AI provider retain or use my research data for model training or product improvement?",
+    "category": "Participant data and ethics",
+    "keywords": [
+      "model training",
+      "training on data",
+      "product improvement",
+      "retain inputs",
+      "reuse inputs",
+      "secondary use",
+      "downstream use",
+      "privacy terms",
+      "provider terms"
+    ],
+    "status": "approval",
+    "answer": "Do not assume research data will only be used for the immediate task. Depending on the tool, settings and contractual arrangements, inputs or outputs may be retained, reviewed, reused for product development or incorporated into model improvement or training. The proposed use must be compatible with ethics approval, participant consent, privacy obligations, data governance and restrictions on future use.",
+    "why": [
+      "Consent to participate in research or store data does not automatically authorise AI model training or other downstream reuse.",
+      "Provider data-handling arrangements can change the approved data flow and create uses not anticipated when consent was obtained."
+    ],
+    "actions": [
+      "Check the provider terms, privacy settings and contractual protections.",
+      "Establish whether retention, reuse or model training can be disabled or contractually excluded.",
+      "Confirm compatibility with ethics approval, consent, the data management plan and data governance requirements.",
+      "Seek ethics, privacy/information security or RDM advice where arrangements are unclear."
+    ],
+    "recording": "Record the tool, version, relevant privacy or training settings, data type, approvals and any contractual safeguards.",
+    "sections": [
+      "Recommendation 2",
+      "Section 8",
+      "Appendix A",
+      "Appendix D"
+    ],
+    "support": [
+      "Human Research Ethics Committee",
+      "Research Data Management support",
+      "Privacy and information security"
+    ]
+  },
+  {
+    "id": "ai-bias-research",
+    "title": "How should I assess bias and exclusion in AI-supported research?",
+    "category": "Accuracy, bias and verification",
+    "keywords": [
+      "bias",
+      "equity",
+      "exclusion",
+      "stereotype",
+      "western bias",
+      "language bias",
+      "representation",
+      "neutral",
+      "dominant perspectives",
+      "model bias"
+    ],
+    "status": "caution",
+    "answer": "Assume AI systems are not neutral. Bias may arise from training data, classification practices, model design, system objectives and the social and institutional contexts in which tools are developed and used. Evaluate how AI may shape what is visible, authoritative, omitted or generalised in your task.",
+    "why": [
+      "Bias can affect any AI-supported research task, not only research about marginalised populations.",
+      "Prompting for more diverse examples may help exploration but does not remove structural bias in the model or its training data.",
+      "AI self-critique is not independent validation."
+    ],
+    "actions": [
+      "Compare AI outputs with appropriate scholarly evidence and relevant knowledge systems.",
+      "Check for stereotypes, deficit framing, omissions, inappropriate generalisation and privileging of dominant perspectives.",
+      "Consider documented performance differences across languages, populations or contexts.",
+      "Do not shift responsibility for correcting AI bias onto members of marginalised or underrepresented communities."
+    ],
+    "recording": "Where bias assessment affects methods or interpretation, record the tool/model, prompts, checks performed, material limitations and how they affected research decisions.",
+    "sections": [
+      "Core Principles",
+      "Recommendation 4",
+      "Recommendation 5",
+      "Section 7",
+      "Appendix D"
+    ],
+    "support": [
+      "Supervisor or project lead",
+      "Methodologist",
+      "Library research support"
     ]
   }
 ]

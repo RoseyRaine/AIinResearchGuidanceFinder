@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0 — 2 October 2026
+- Updated the decision tool to the 52-page October draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
+- Expanded bias, equity and exclusion guidance across the core principles, Recommendation 5, lifecycle guidance and search questions.
+- Added ICIP, Indigenous Data and Indigenous Data Sovereignty definitions and updated Indigenous research guidance, decision pathways and the Quick Decision Guide.
+- Added Case Study 15 on AI, ICIP and Indigenous Data and updated Case Studies 5 and 12.
+- Expanded participant-data guidance on re-identification, downstream use, provider retention, product improvement and model training.
+- Rebuilt Appendix A and Appendix D content in the full guidance from the updated checklists.
+- Updated the AI Tool Suitability Checklist to include model training, bias and representation, ICIP/Indigenous Data, auditability and proportionality.
+- Added searchable guidance on provider model training/data reuse and evaluating AI bias.
+
 ## 0.6.3 — 1 October 2026
 - Fixed the main navigation alignment on the Recommendations and Declaration examples pages.
 - Restored the shared centred shell margins that were being overridden by an older `.quick-nav` margin rule.
