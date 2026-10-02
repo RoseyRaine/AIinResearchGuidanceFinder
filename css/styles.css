@@ -568,3 +568,8 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 .quick-nav.shell {
   margin: 18px auto;
 }
+
+/* v0.7.1 — long case-study layout */
+.case-adapted{grid-column:1/-1;margin:1rem 0 0;padding:0;font-size:.96rem;color:#514b46;}
+.case-card-single .case-body{grid-template-columns:1fr;}
+.case-card-single .case-body>div,.case-card-single .case-adapted,.case-card-single .case-reflection,.case-card-single .case-guideline-link{grid-column:1;}
