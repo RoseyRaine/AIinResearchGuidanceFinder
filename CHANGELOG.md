@@ -1,6 +1,20 @@
 # Changelog
 
-## 0.7.0 — 2 October 2026
+## 0.8.0 — 6 October 2026
+- Updated the decision tool to the latest 53-page draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
+- Added the new Appendix C declaration example: **General use for thesis, dissertation or research output**.
+- Updated wording and terminology, including selected uses of `genAI` and the core-guideline wording.
+- Updated Recommendation 5 with the new supporting citations to Bender et al. (2021) and UNESCO (2021).
+- Updated Indigenous/ICIP/Indigenous Data guidance to reflect AIATSIS (2020), Maiam nayri Wingara (2018), and the expanded First Nations guidance list.
+- Retained the navigation, recommendation accordions, case studies and layout fixes from v0.7.1.
+
+## 0.7.1 — 2 October 2026
+
+- Fixed Case Study 15 layout so the adaptation note spans the full width and the long scenario/considerations/reflection content flows in a single column.
+
+# Changelog
+
+## 0.7.1 — 2 October 2026
 - Updated the decision tool to the 52-page October draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
 - Expanded bias, equity and exclusion guidance across the core principles, Recommendation 5, lifecycle guidance and search questions.
 - Added ICIP, Indigenous Data and Indigenous Data Sovereignty definitions and updated Indigenous research guidance, decision pathways and the Quick Decision Guide.

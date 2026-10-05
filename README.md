@@ -132,3 +132,10 @@ The upload checker provides a quick first check on copyright and platform terms;
 - `recommendations.html` — the full wording of all nine recommendations in expandable accordions.
 - `declarations.html` — adaptable declaration/acknowledgement wording from Appendix C with copy buttons.
 - `case-studies.html` — now includes all 15 case studies from Appendix E, including the ICIP and Indigenous Data example.
+
+
+### v0.8.0 content update
+- Updated to the 53-page draft reviewed 6 October 2026.
+- Added the new general thesis/dissertation declaration example.
+- Updated terminology and wording to match the latest guidance.
+- Updated Recommendation 5 bias citations and First Nations/ICIP/Indigenous Data supporting guidance.
