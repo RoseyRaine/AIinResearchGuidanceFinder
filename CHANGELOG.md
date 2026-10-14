@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.8.2 — 14 October 2026
+
+- Added the AI in Research Decision Tool logo to the shared site header.
+- Fixed the Case studies hover tooltip so it stays inside the viewport; applied matching edge alignment to Declaration examples.
+- Fixed cross-page navigation so Search questions and Browse topics open the correct panel when selected from Quick decision guide, Case studies, Recommendations or Declaration examples.
+
 ## 0.8.1 — 14 October 2026
 - Added the Appendix B AI Use Log example to the Declaration examples page.
 - Added contextual links to Declaration examples and the AI use log when guided-pathway or question answers call for recording, logging, acknowledgement or declaration of AI use.

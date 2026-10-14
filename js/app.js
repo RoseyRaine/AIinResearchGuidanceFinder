@@ -267,19 +267,40 @@ function initInteractiveTitle() {
   }
 }
 
+function activateTab(name, { focus = true, updateHash = false, scroll = false } = {}) {
+  const tabs = ['guide', 'search', 'browse'];
+  if (!tabs.includes(name)) name = 'guide';
+  tabs.forEach(other => {
+    const selected = other === name;
+    el(`tab-${other}`)?.classList.toggle('is-active', selected);
+    el(`tab-${other}`)?.setAttribute('aria-selected', String(selected));
+    if (el(`${other}-panel`)) el(`${other}-panel`).hidden = !selected;
+  });
+  if (el('answerPanel')) el('answerPanel').hidden = true;
+  if (updateHash) history.replaceState(null, '', `#${name}-panel`);
+  if (focus && name === 'search') el('searchInput')?.focus();
+  if (scroll) {
+    window.requestAnimationFrame(() => {
+      el(`${name}-panel`)?.scrollIntoView({ behavior: 'auto', block: 'start' });
+    });
+  }
+}
+
+function tabFromHash() {
+  const match = window.location.hash.match(/^#(guide|search|browse)-panel$/);
+  return match ? match[1] : null;
+}
+
 function bindTabs() {
   const tabs = ['guide', 'search', 'browse'];
   tabs.forEach(name => {
-    el(`tab-${name}`)?.addEventListener('click', () => {
-      tabs.forEach(other => {
-        const selected = other === name;
-        el(`tab-${other}`).classList.toggle('is-active', selected);
-        el(`tab-${other}`).setAttribute('aria-selected', String(selected));
-        el(`${other}-panel`).hidden = !selected;
-      });
-      el('answerPanel').hidden = true;
-      if (name === 'search') el('searchInput')?.focus();
-    });
+    el(`tab-${name}`)?.addEventListener('click', () => activateTab(name));
+  });
+  const initialTab = tabFromHash();
+  if (initialTab) activateTab(initialTab, { focus: initialTab === 'search', scroll: true });
+  window.addEventListener('hashchange', () => {
+    const name = tabFromHash();
+    if (name) activateTab(name, { focus: name === 'search', scroll: true });
   });
 }
 
