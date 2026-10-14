@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.3 — 14 October 2026
+- Reduced the AI in Research Decision Tool logo to the same visual height as the CSU logo and kept it in the upper-right header position.
+- Fixed the Case studies hover tooltip so it anchors to the left edge of the button and remains fully visible in narrow/embedded layouts.
+
 ## v0.8.2 — 14 October 2026
 
 - Added the AI in Research Decision Tool logo to the shared site header.

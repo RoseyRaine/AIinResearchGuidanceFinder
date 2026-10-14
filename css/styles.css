@@ -610,3 +610,26 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
   .tool-brand{display:none}
 }
 @media print{.tool-brand{display:none!important}}
+
+/* v0.8.3 compact tool logo and robust More guidance tooltip positioning */
+.tool-brand-logo{
+  width:auto;
+  height:46px;
+  max-width:110px;
+  max-height:46px;
+  object-fit:contain;
+}
+.guidance-shortcuts .guidance-shortcut[href="case-studies.html"]::after{
+  left:0 !important;
+  right:auto !important;
+  width:min(245px, calc(100vw - 90px));
+  max-width:245px;
+  transform:translate(0,-6px) !important;
+}
+.guidance-shortcuts .guidance-shortcut[href="case-studies.html"]:hover::after,
+.guidance-shortcuts .guidance-shortcut[href="case-studies.html"]:focus-visible::after{
+  transform:translate(0,0) !important;
+}
+@media(max-width:760px){
+  .tool-brand-logo{height:42px;max-height:42px;max-width:100px}
+}
