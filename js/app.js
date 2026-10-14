@@ -335,6 +335,7 @@ function renderPathwayResult(resultId) {
     </div>
     <h3>Before proceeding</h3>
     <ul>${result.actions.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+    ${needsDeclarationLink('', result.actions) ? declarationResourceLink() : ''}
     ${result.externalLink ? `<div class="pathway-external"><a class="button button-primary" href="${escapeHtml(result.externalLink)}" target="_blank" rel="noopener noreferrer">${escapeHtml(result.externalLabel || 'Open related tool')}</a></div>` : ''}
     <div class="answer-actions no-print">
       <button class="button button-secondary" id="guideBack" type="button">Back</button>
@@ -459,6 +460,15 @@ function guidelineBasisList(items) {
   }).join('')}</ul><p class="guidance-document-link"><a href="guide.html">View the complete AI in Research guidance</a></p>`;
 }
 
+function needsDeclarationLink(recording = '', actions = []) {
+  const text = `${recording} ${(actions || []).join(' ')}`.toLowerCase();
+  return /\b(declar|record|log|acknowledg)/.test(text);
+}
+
+function declarationResourceLink() {
+  return `<p class="declaration-resource-link"><a href="declarations.html">See declaration examples and AI use log <span aria-hidden="true">→</span></a></p>`;
+}
+
 function showAnswer(id) {
   const question = state.questions.find(item => item.id === id);
   if (!question) return;
@@ -483,7 +493,7 @@ function showAnswer(id) {
       <p class="eyebrow">Guideline breakdown</p>
       ${accordionItem('Why this matters', list(question.why), true)}
       ${accordionItem('Before proceeding', list(question.actions))}
-      ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>`)}
+      ${accordionItem('What to record or declare', `<p>${escapeHtml(question.recording)}</p>${needsDeclarationLink(question.recording, question.actions) ? declarationResourceLink() : ''}`)}
       ${accordionItem('Guideline basis', guidelineBasisList(question.sections))}
       ${accordionItem('Possible support pathways', supportList(question.support))}
       ${question.uploadChecker ? `<div class="answer-related-tool"><p class="eyebrow">Related tool</p><h3>Need to check whether material can be uploaded?</h3><p>The Library upload checker gives a quick first check on copyright and platform terms. Other ethics, privacy, confidentiality, contractual or data-governance requirements may still apply.</p><a class="button button-secondary" href="https://roseyraine.github.io/ai-upload-check/" target="_blank" rel="noopener noreferrer">Can I upload this to an AI tool?</a></div>` : ''}

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.1 — 14 October 2026
+- Added the Appendix B AI Use Log example to the Declaration examples page.
+- Added contextual links to Declaration examples and the AI use log when guided-pathway or question answers call for recording, logging, acknowledgement or declaration of AI use.
+- Added hover/focus tooltips to Case studies, Recommendations and Declaration examples under More guidance.
+- Retained the v0.8.0 guidance content and existing layout/navigation fixes.
+
 ## 0.8.0 — 6 October 2026
 - Updated the decision tool to the latest 53-page draft of *Artificial Intelligence in Research: Guidance for Responsible Use*.
 - Added the new Appendix C declaration example: **General use for thesis, dissertation or research output**.
