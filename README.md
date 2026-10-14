@@ -134,14 +134,19 @@ The upload checker provides a quick first check on copyright and platform terms;
 - `case-studies.html` — now includes all 15 case studies from Appendix E, including the ICIP and Indigenous Data example.
 
 
-### v0.8.3 content update
+### v0.8.4 content update
 - Updated to the 53-page draft reviewed 6 October 2026.
 - Added the new general thesis/dissertation declaration example.
 - Updated terminology and wording to match the latest guidance.
 - Updated Recommendation 5 bias citations and First Nations/ICIP/Indigenous Data supporting guidance.
 
 
-### v0.8.3 additions
+### v0.8.4 additions
 - Declaration examples page now includes an AI Use Log example from Appendix B.
 - Results that require recording or declaring AI use link directly to declaration/log support.
 - More guidance buttons now have explanatory hover/focus tooltips.
+
+
+### v0.8.4
+- Added Researcher AI self-check and AI tool suitability checklist pages under More guidance.
+- Made the Full guidance “On this page” menu independently scrollable while it remains sticky on desktop.

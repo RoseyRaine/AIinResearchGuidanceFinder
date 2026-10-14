@@ -633,3 +633,18 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 @media(max-width:760px){
   .tool-brand-logo{height:42px;max-height:42px;max-width:100px}
 }
+
+
+/* v0.8.4 checklist pages and scrollable full-guidance contents */
+.guide-toc{max-height:calc(100vh - 2rem);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;}
+.checklist-sections{display:grid;gap:1.25rem;margin:0 0 3rem;}
+.checklist-section{background:#fbf7f1;border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,32px);}
+.checklist-section h2{margin:0 0 1rem;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.5rem,2.5vw,2.15rem);}
+.interactive-checklist{list-style:none;margin:0;padding:0;display:grid;gap:.6rem;}
+.interactive-checklist li{margin:0;}
+.interactive-checklist label{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;padding:.8rem .9rem;border:1px solid rgba(34,34,34,.12);border-radius:12px;background:#fff;cursor:pointer;}
+.interactive-checklist label:hover{border-color:rgba(240,87,42,.55);background:#fffaf6;}
+.interactive-checklist input{width:1.15rem;height:1.15rem;margin:.15rem 0 0;accent-color:var(--orange);}
+.interactive-checklist span{font-family:Arial,sans-serif;line-height:1.5;}
+@media(max-width:820px){.guide-toc{max-height:none;overflow:visible;scrollbar-gutter:auto;}}
+@media print{.interactive-checklist label{break-inside:avoid}.checklist-section{break-inside:avoid;}}

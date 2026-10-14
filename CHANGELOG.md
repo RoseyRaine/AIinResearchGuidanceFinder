@@ -1,3 +1,11 @@
+# v0.8.4 — 14 October 2026
+
+- Added two new **More guidance** resources based on Appendix A and Appendix D:
+  - Researcher AI self-check
+  - AI tool suitability checklist
+- Added interactive checkbox presentation while preserving the source guidance wording.
+- Fixed the Full guidance **On this page** navigation so the sticky left menu can scroll independently on desktop.
+
 # Changelog
 
 ## 0.8.3 — 14 October 2026
