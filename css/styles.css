@@ -676,3 +676,61 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 
 .declaration-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
 @media(max-width:800px){.declaration-grid--two{grid-template-columns:1fr}}
+
+/* v0.9.1 — make the AI use log visibly table-like */
+.ai-use-log-table-wrap{
+  margin-top:1.25rem;
+  overflow-x:auto;
+  border:1px solid #8f877d;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(34,34,34,.06);
+}
+.ai-use-log-table{
+  width:100%;
+  min-width:1260px;
+  border-collapse:collapse !important;
+  border-spacing:0 !important;
+  background:#fff;
+  font-family:Arial,sans-serif;
+  font-size:.92rem;
+  line-height:1.4;
+}
+.ai-use-log-table thead th{
+  background:#7d6b47 !important;
+  color:#fff !important;
+  font-weight:700;
+  text-align:left;
+  vertical-align:bottom;
+  border:1px solid #65583e !important;
+  padding:.8rem .7rem !important;
+}
+.ai-use-log-table tbody td{
+  border:1px solid #b9b0a6 !important;
+  padding:.8rem .7rem !important;
+  text-align:left;
+  vertical-align:top;
+  background:#fff;
+}
+.ai-use-log-table tbody tr.example-row td{
+  background:#f4efe7 !important;
+  color:#3f3934;
+  font-style:normal;
+}
+.ai-use-log-table tbody tr.blank-row td{
+  height:76px;
+  background:#fff !important;
+}
+.ai-use-log-table th:first-child,.ai-use-log-table td:first-child{min-width:115px}
+.ai-use-log-table th:nth-child(2),.ai-use-log-table td:nth-child(2){min-width:150px}
+.ai-use-log-table th:nth-child(3),.ai-use-log-table td:nth-child(3){min-width:190px}
+.ai-use-log-table th:nth-child(4),.ai-use-log-table td:nth-child(4){min-width:150px}
+.ai-use-log-table th:nth-child(5),.ai-use-log-table td:nth-child(5){min-width:200px}
+.ai-use-log-table th:nth-child(6),.ai-use-log-table td:nth-child(6){min-width:115px}
+.ai-use-log-table th:nth-child(7),.ai-use-log-table td:nth-child(7){min-width:170px}
+.ai-use-log-table th:nth-child(8),.ai-use-log-table td:nth-child(8){min-width:165px}
+@media print{
+  .ai-use-log-table-wrap{border:0;box-shadow:none;overflow:visible}
+  .ai-use-log-table{min-width:0;font-size:8pt}
+  .ai-use-log-table thead th{background:#ddd !important;color:#000 !important}
+}

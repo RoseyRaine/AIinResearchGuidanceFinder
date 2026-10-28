@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.9.0 — 29 October 2026
+## 0.9.1 — 29 October 2026
 
 - Synced the Decision Tool with the revised October 2026 guidance, including HDR Procedure alignment.
 - Added the Charles Sturt HDR AI assistance acknowledgement and additional declaration examples.
