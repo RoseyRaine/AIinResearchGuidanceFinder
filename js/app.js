@@ -86,7 +86,8 @@ const supportLinks = {
   'Review methodologist': 'https://library.csu.edu.au/our-libraries/contact-library-team/faculty-teams',
   'Methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
   'Statistician or methodologist': 'https://research.csu.edu.au/research-at-charles-sturt/research-support',
-  'AI upload checker': 'https://roseyraine.github.io/ai-upload-check/'
+  'AI upload checker': 'https://roseyraine.github.io/ai-upload-check/',
+  'Higher Degree by Research Procedure': 'https://policy.csu.edu.au/document/view-current.php?id=524'
 };
 
 async function loadData() {
@@ -487,7 +488,7 @@ function needsDeclarationLink(recording = '', actions = []) {
 }
 
 function declarationResourceLink() {
-  return `<p class="declaration-resource-link"><a href="declarations.html">See declaration examples and AI use log <span aria-hidden="true">→</span></a></p>`;
+  return `<p class="declaration-resource-link"><a href="declarations.html">See declaration examples, HDR acknowledgement and AI use log <span aria-hidden="true">→</span></a></p>`;
 }
 
 function showAnswer(id) {

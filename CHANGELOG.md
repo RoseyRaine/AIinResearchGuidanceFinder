@@ -1,3 +1,14 @@
+# Changelog
+
+## 0.9.0 — 29 October 2026
+
+- Synced the Decision Tool with the revised October 2026 guidance, including HDR Procedure alignment.
+- Added the Charles Sturt HDR AI assistance acknowledgement and additional declaration examples.
+- Reorganised declaration cards by length to reduce blank space and improve scanning.
+- Restyled the AI use log as a structured table and added a downloadable Word template.
+- Added HDR Procedure links in relevant guidance and declaration sections.
+- Corrected minor source-document typos in the tool presentation (self-check numbering, declaration typo, and data-analysis bracket).
+
 # v0.8.4 — 14 October 2026
 
 - Added two new **More guidance** resources based on Appendix A and Appendix D:

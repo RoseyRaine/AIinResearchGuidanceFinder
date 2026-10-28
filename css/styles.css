@@ -648,3 +648,31 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 .interactive-checklist span{font-family:Arial,sans-serif;line-height:1.5;}
 @media(max-width:820px){.guide-toc{max-height:none;overflow:visible;scrollbar-gutter:auto;}}
 @media print{.interactive-checklist label{break-inside:avoid}.checklist-section{break-inside:avoid;}}
+
+
+/* v0.9.0 declaration layout and downloadable AI-use log */
+.declaration-section{margin:2.25rem 0 3rem}
+.declaration-section>h2{margin:.3rem 0 .6rem;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.05}
+.declaration-section>p:not(.eyebrow){max-width:920px}
+.declaration-grid--single{grid-template-columns:minmax(0,1fr);max-width:1000px}
+.declaration-grid--three{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+.declaration-card{height:auto;align-self:start}
+.declaration-card h3{font-size:1.28rem;margin:0 0 .65rem}
+.declaration-card--hdr{border:2px solid var(--orange);background:#fff7ef}
+.declaration-card--publisher{background:#f3eee7}
+.declaration-card--short{min-height:260px}
+.declaration-card--medium{min-height:345px}
+.declaration-card--long{grid-column:span 1}
+.copy-declaration{margin-top:auto}
+.ai-use-log-actions{margin:1rem 0 1.25rem}
+.ai-use-log-table{min-width:1260px;border-collapse:collapse;background:#fff}
+.ai-use-log-table th{background:#eee7db;color:var(--charcoal);font-weight:700}
+.ai-use-log-table th,.ai-use-log-table td{border:1px solid #bdb5aa;padding:.7rem .65rem;text-align:left;vertical-align:top}
+.ai-use-log-table .example-row td{font-style:italic;background:#fbf7f1}
+.ai-use-log-table .blank-row td{height:64px;background:#fff}
+.guide-download-link{margin:1rem 0 1.25rem}
+@media(max-width:1050px){.declaration-grid--three{grid-template-columns:repeat(2,minmax(0,1fr))}.declaration-card--short,.declaration-card--medium{min-height:0}}
+@media(max-width:700px){.declaration-grid--three,.declaration-grid--single{grid-template-columns:1fr}.declaration-card--short,.declaration-card--medium{min-height:0}}
+
+.declaration-grid--two{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+@media(max-width:800px){.declaration-grid--two{grid-template-columns:1fr}}
