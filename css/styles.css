@@ -87,7 +87,8 @@ h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;margin-bottom:1.4rem;max-wid
 .guide-layout { display: grid; grid-template-columns: minmax(13rem, 18rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
 .guide-toc { position: sticky; top: 1rem; padding: 1.25rem; border: 1px solid rgba(34,34,34,.18); background: #eee7db; }
 .guide-toc h2 { margin-top: 0; font-size: 1.4rem; }
-.guide-toc ol { margin: 0; padding-left: 1.2rem; }
+.guide-toc ol { margin: 0; padding-left: 0; list-style: none; }
+.guide-toc .toc-level-2 { margin-left: 1rem; }
 .guide-toc li { margin: .45rem 0; }
 .guide-toc a { color: inherit; font-family: Arial, sans-serif; font-size: .9rem; }
 .guide-content { min-width: 0; }

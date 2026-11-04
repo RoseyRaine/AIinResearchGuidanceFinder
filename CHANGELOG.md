@@ -1,6 +1,11 @@
+# v0.9.2 — 4 November 2026
+
+- Fixed Full guidance “On this page” navigation so browser-generated list numbers are removed.
+- Retained the section/recommendation numbering that belongs to the guidance headings.
+
 # Changelog
 
-## 0.9.1 — 29 October 2026
+## 0.9.2 — 29 October 2026
 
 - Synced the Decision Tool with the revised October 2026 guidance, including HDR Procedure alignment.
 - Added the Charles Sturt HDR AI assistance acknowledgement and additional declaration examples.
